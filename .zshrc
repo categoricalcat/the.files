@@ -50,6 +50,7 @@ alias grep='grep --color=auto'
 # Environment variables
 export EDITOR='emacs'           # Default editor
 export PATH="$HOME/.local/bin:$PATH"  # Add local bin to PATH
+ZSH_THEME="spaceship"
 
 # Key bindings
 bindkey -e                    # Emacs key bindings
