@@ -1,4 +1,22 @@
-# Basic Zsh Configuration
+#! /usr/bin/env zsh
+
+echo "福福的zsh配置"
+echo "[uid] $(id -u)"
+echo "[iam] $(whoami)"
+echo "[pwd] $(pwd)"
+echo "[home] $HOME"
+
+echo "Stowing files..."
+cd ~/the.files
+stow -v -R -t ~ .
+cd ~
+
+# Warpify - enable Warp terminal features
+# The ANSI OSC 1337 escape sequence notifies Warp that the shell is ready
+# Check if we're in an interactive shell before sending the sequence
+if [[ "$-" == *i* ]] && [[ "${TERM_PROGRAM}" == "WarpTerminal" ]] || [[ "${WARP_BOOTSTRAPPED}" ]]; then
+  printf '\e]1337;RequestWarpPrompt\a'
+fi
 
 # History settings
 HISTFILE=~/.zsh_history
@@ -43,9 +61,7 @@ mkdir -p ~/.npm-global
 npm config set prefix '~/.npm-global'
 export PATH="$HOME/.npm-global/bin:$PATH"  # Add npm global bin to PATH
 
-# Warpify - enable Warp terminal features
-# The ANSI OSC 1337 escape sequence notifies Warp that the shell is ready
-# Check if we're in an interactive shell before sending the sequence
-if [[ "$-" == *i* ]] && [[ "${TERM_PROGRAM}" == "WarpTerminal" ]] || [[ "${WARP_BOOTSTRAPPED}" ]]; then
-  printf '\e]1337;RequestWarpPrompt\a'
-fi
+# alias sourcing .zshrc
+alias zshrc='source ~/.zshrc'
+
+echo "hello, gently, from self :3"
