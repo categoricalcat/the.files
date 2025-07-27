@@ -3,13 +3,7 @@
 # 福福的zsh配置
 # 
 
-# Initialize STARSHIP variables to prevent unset parameter errors with strict mode
-export STARSHIP_CMD_STATUS=${STARSHIP_CMD_STATUS:-0}
-export STARSHIP_CMD_DURATION=${STARSHIP_CMD_DURATION:-0}
-export STARSHIP_PIPE_STATUS=${STARSHIP_PIPE_STATUS:-}
-export STARSHIP_SHELL=${STARSHIP_SHELL:-zsh}
-
-set -euo pipefail
+set -eo pipefail
 # setopt xtrace
 
 
@@ -23,8 +17,12 @@ cd ~/the.files
 stow -v -R -t ~ .
 cd ~
 
-# direnv
+echo "setting direnv"
 eval "$(direnv hook zsh)"
+
+echo "setting starship"
+# Temporarily disable nounset for starship init due to widgets array access
+eval "$(starship init zsh)"
 
 # Source modular configuration files
 for config in ~/the.files/.config/zsh/*.zsh; do
