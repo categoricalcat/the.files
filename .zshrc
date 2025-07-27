@@ -104,6 +104,7 @@ export PATH="$HOME/.npm-global/bin:$PATH"  # Add npm global bin to PATH
 
 # alias sourcing .zshrc
 alias zshrc='source ~/.zshrc'
+alias query='~/the.files/query.sh'
 
 # Warpify - enable Warp terminal features
 # The ANSI OSC 1337 escape sequence notifies Warp that the shell is ready
