@@ -3,7 +3,7 @@
 # 福福的zsh配置
 # 
 
-set -eo pipefail
+# Removed 'set -e -o' - this was causing SSH sessions to close on any error
 # setopt xtrace
 
 
@@ -12,7 +12,7 @@ echo "[uid] $(id -u)"
 echo "[iam] $(whoami)"
 echo "[pwd] $(pwd)"
 
-echo "Stowing files..."
+echo "stowing files"
 cd ~/the.files
 stow -v -R -t ~ .
 cd ~

@@ -19,15 +19,37 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
-# Docker aliases (previously from oh-my-zsh docker plugin)
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias dimg='docker images'
-alias dex='docker exec -it'
-alias dlog='docker logs'
-alias dstop='docker stop'
-alias drm='docker rm'
-alias drmi='docker rmi'
+# Podman aliases
+alias pps='podman ps'
+alias ppsa='podman ps -a'
+alias pimg='podman images'
+alias pex='podman exec -it'
+alias plog='podman logs'
+alias pstop='podman stop'
+alias prm='podman rm'
+alias prmi='podman rmi'
+alias prun='podman run'
+alias pbuild='podman build'
+alias ppull='podman pull'
+alias ppush='podman push'
+alias ptop='podman top'
+alias pstats='podman stats'
+alias pinspect='podman inspect'
+
+# Podman compose aliases
+alias pc='podman-compose'
+alias pcu='podman-compose up'
+alias pcud='podman-compose up -d'
+alias pcd='podman-compose down'
+alias pcl='podman-compose logs'
+alias pclf='podman-compose logs -f'
+alias pcps='podman-compose ps'
+alias pcr='podman-compose restart'
+
+# Podman system commands
+alias pprune='podman system prune'
+alias pinfo='podman info'
+alias pversion='podman version'
 
 # Other useful aliases
 alias ll='ls -alh'
@@ -40,3 +62,4 @@ alias grep='grep --color=auto'
 alias zshrc='source ~/.zshrc'
 alias query='~/the.files/query.sh' 
 alias nix-switch="sudo nixos-rebuild switch"
+alias nix-dr="sudo nixos-rebuild dry-run"
