@@ -11,5 +11,6 @@ fi
 
 # zoxide configuration
 if command -v zoxide >/dev/null 2>&1; then
+    echo "setting zoxide"
     eval "$(zoxide init zsh)"
 fi
