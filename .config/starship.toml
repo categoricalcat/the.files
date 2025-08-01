@@ -1,7 +1,7 @@
 # A vibrant rainbow theme!
 
 format = """
-[ 道 ](fg:#E84855)\
+[道 ](fg:#E84855)\
 [](#E84855)\
 $os\
 $username\
@@ -46,7 +46,7 @@ disabled = true # Disabled by default
 
 [directory]
 style = "bg:#F9A03F fg:#2C2C2C"
-format = "[ $path ]($style)"
+format = "[$path]($style)"
 truncation_length = 3
 truncation_symbol = "径 "
 
@@ -77,13 +77,13 @@ style = "bg:#7AC74F fg:#FFFFFF"
 format = '[ ($version) ]($style)'
 
 [git_branch]
-symbol = "支"
+symbol = "支 "
 style = "bg:#F3DE2C fg:#2C2C2C"
-format = '[ $symbol $branch ]($style)'
+format = '[$symbol$branch ]($style)'
 
 [git_status]
 style = "bg:#F3DE2C fg:#2C2C2C"
-format = '[$all_status$ahead_behind ]($style)'
+format = '[$all_status$ahead_behind]($style)'
 
 [golang]
 style = "bg:#7AC74F fg:#FFFFFF"
@@ -124,4 +124,4 @@ format = '[ ($version) ]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#9C59D1 fg:#FFFFFF"
-format = '[ 爱 $time ]($style)'
+format = '[爱 $time ]($style)'

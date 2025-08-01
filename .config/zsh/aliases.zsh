@@ -64,3 +64,4 @@ alias query='~/the.files/query.sh'
 alias nix-switch="sudo nixos-rebuild switch"
 alias nix-dr="sudo nixos-rebuild dry-run"
 alias gh-pr="gh pr create -a @me --fill-verbose -B $1"
+alias gen-commit="~/the.files/git-commit-msg.sh"
