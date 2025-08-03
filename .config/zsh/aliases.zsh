@@ -1,18 +1,8 @@
-# Git aliases (previously from oh-my-zsh git plugin)
-alias ga='git add'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-alias gcam='git commit -a -m'
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gd='git diff'
-alias gf='git fetch'
-alias gl='git pull'
-alias glog='git log --oneline --decorate --graph'
-alias gp='git push'
+# Git aliases - Now using git aliases directly in ~/.gitconfig
+# Common shortcuts still available for muscle memory
+alias g='git'
 alias gst='git status'
-alias gb='git branch'
-alias gm='git merge'
+alias glog='git log --oneline --decorate --graph'
 
 # Directory shortcuts
 alias -g ...='../..'
