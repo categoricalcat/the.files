@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CF_TOKEN}
+    env_file:
+      - .env
+    volumes:
+      - ./.cloudflared:/etc/cloudflared
+    network_mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # secrets:
+  #   cf_token:
+  #     external: true
