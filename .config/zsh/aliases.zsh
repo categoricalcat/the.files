@@ -51,7 +51,10 @@ alias grep='grep --color=auto'
 # Custom aliases
 alias zshrc='source ~/.zshrc'
 alias query='~/the.files/query.sh' 
-alias nix-switch="sudo nixos-rebuild switch"
+nix-switch() {
+  local host="${1:-fufuwuqi}"
+  sudo nixos-rebuild switch --flake "/etc/nixos#${host}" --upgrade
+}
 alias nix-dr="sudo nixos-rebuild dry-run"
 alias gh-pr="gh pr create -a @me --fill-verbose -B $1"
 alias gen-commit="~/the.files/git-commit-msg.sh"

@@ -1,0 +1,16 @@
+# git submodule update --init --recursive --remote
+
+[submodule ".emacs.d"]
+path = .emacs.d
+url = git@github.com:categoricalcat/.emacs.d.git
+branch = main
+
+[submodule "nixos"]
+path = nixos
+url = git@github.com:categoricalcat/nixos.git
+branch = main
+
+[submodule "mc-fufuland"]
+path = mc-fufuland
+url = git@github.com:categoricalcat/mc-fufuland.git
+branch = main
