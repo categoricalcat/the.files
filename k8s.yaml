@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cloudflared
+  labels:
+    app: cloudflared
+spec:
+  hostNetwork: true
+  restartPolicy: Always
+  containers:
+  - name: cloudflared
+    image: cloudflare/cloudflared:latest
+    command: ["cloudflared", "tunnel", "--no-autoupdate", "run", "--token", "$(CF_TOKEN)"]
+    env:
+    - name: CF_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: cf-token
+          key: token
