@@ -1,0 +1,37 @@
+# Minimal cloudflared configuration
+# This file will be symlinked to ~/.cloudflared/config.yml via stow
+
+# Tunnel credentials will be stored in ~/.cloudflared/<tunnel-id>.json
+# Create a tunnel: cloudflared tunnel create <tunnel-name>
+tunnel: YOUR-TUNNEL-ID
+
+# HTTP2 origin server connections
+originRequest:
+  http2Origin: true
+  noTLSVerify: false
+
+# Logging
+loglevel: info
+
+# Metrics server (optional)
+# metrics: localhost:2000
+
+# Ingress rules - define how traffic is routed
+ingress:
+  # Example services (uncomment and modify as needed):
+  
+  # Route subdomain to local service
+  # - hostname: app.example.com
+  #   service: http://localhost:3000
+  
+  # Route path to different service  
+  # - hostname: example.com
+  #   path: /api/*
+  #   service: http://localhost:8080
+  
+  # SSH over cloudflared
+  # - hostname: ssh.example.com
+  #   service: ssh://localhost:22
+  
+  # Catch-all rule (required)
+  - service: http_status:404
