@@ -15,5 +15,5 @@ spec:
     - name: CF_TOKEN
       valueFrom:
         secretKeyRef:
-          name: cf-token
-          key: token
+          name: cf_token
+          key: CF_TOKEN
