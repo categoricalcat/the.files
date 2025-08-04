@@ -105,6 +105,7 @@
 
 [diff]
 	algorithm = histogram
+	submodule = log
 
 [rerere]
 	enabled = true
@@ -117,3 +118,13 @@
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+
+[submodule]
+	recurse = true
+	fetchJobs = 4
+
+[status]
+	submoduleSummary = true
+
+[fetch]
+	recurseSubmodules = on-demand
