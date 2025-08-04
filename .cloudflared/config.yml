@@ -1,4 +1,4 @@
-tunnel: YOUR-TUNNEL-ID
+tunnel: 1b9e62ea-2211-40dc-b743-96f42c681567
 
 originRequest:
   http2Origin: true
@@ -13,7 +13,7 @@ ingress:
     service: tcp://0.0.0.0:25565
 
   - hostname: ssh.fufu.land
-    service: ssh://localhost:24212
+    service: ssh://0.0.0.0:24212
   
   # Route subdomain to local service
   # - hostname: app.example.com

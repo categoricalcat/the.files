@@ -19,28 +19,28 @@ fi
 echo "Tunnel ID: $tunnel_id"
 
 # Setup DNS route for fufu.land
-if cloudflared tunnel route dns list | grep -q "fufu.land"; then
-    echo "DNS route for fufu.land already exists"
-else
-    echo "Creating DNS route for fufu.land..."
-    cloudflared tunnel route dns "$tunnel_name" fufu.land
-    cloudflared tunnel route dns "$tunnel_name" "*.fufu.land"
-fi
+echo "Creating DNS route for fufu.land..."
+cloudflared tunnel route dns "$tunnel_name" fufu.land || echo "Route may already exist"
+cloudflared tunnel route dns "$tunnel_name" "*.fufu.land" || echo "Wildcard route may already exist"
 
 echo
 
 # Update config with tunnel ID
-config_file="$HOME/.cloudflared/config.yml"
+config_file="$HOME/the.files/.cloudflared/config.yml"
+
 if [[ -f "$config_file" ]]; then
-    # First, remove any existing tunnel line (commented or not)
-    sed -i "/^#*\s*tunnel:/d" "$config_file"
-    
-    # Then add the new tunnel ID after the comment
-    sed -i "/# Tunnel credentials will be stored/a\\tunnel: $tunnel_id" "$config_file"
-    
+    # Check if tunnel: line exists
+    if grep -q "^tunnel:" "$config_file"; then
+        # Replace the first tunnel: line
+        sed -i "s/^tunnel:.*/tunnel: $tunnel_id/" "$config_file"
+    else
+        # Add tunnel: line at the beginning (after any empty lines)
+        sed -i "1s/^/tunnel: $tunnel_id\n/" "$config_file"
+    fi
     echo "Set tunnel ID in config.yml"
 else
-    echo "Warning: config.yml not found at $config_file"
+    echo "Error: config.yml not found at $config_file"
+    exit 1
 fi
 
 echo
@@ -57,10 +57,9 @@ elif systemctl --user is-enabled cloudflared &> /dev/null; then
     systemctl --user restart cloudflared
     systemctl --user status cloudflared --no-pager | head -n 3
 else
-    echo "Starting cloudflared tunnel..."
-    echo "Run as service: sudo cloudflared service install"
-    echo "Or run directly: cloudflared tunnel run $tunnel_name"
-    # Run in background for immediate use
-    cloudflared tunnel run "$tunnel_name" &
-    echo "Tunnel started in background (PID: $!)"
+    echo "No cloudflared service found."
+    echo "To install as system service: sudo cloudflared service install"
+    echo "To install as user service: cloudflared service install --user"
+    echo
+    echo "After installing, the service will start automatically."
 fi
