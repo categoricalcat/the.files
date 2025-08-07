@@ -1,6 +1,6 @@
 # the.files
 
-Personal dotfiles managed with GNU Stow.
+lucky dotfiles managed with GNU Stow.
 
 ## What's Here
 
