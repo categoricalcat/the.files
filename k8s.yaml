@@ -10,6 +10,7 @@ spec:
   containers:
   - name: cloudflared
     image: cloudflare/cloudflared:latest
+    imagePullPolicy: Always
     command: ["cloudflared", "tunnel", "--no-autoupdate", "run", "--token", "$(CF_TOKEN)"]
     env:
     - name: CF_TOKEN
