@@ -15,59 +15,59 @@
 	a = add
 	aa = add --all
 	ap = add --patch
-	
+
 	# Commit shortcuts
 	c = commit -v
 	ca = commit -v -a
 	cam = commit -a -m
 	cm = commit -m
 	amend = commit --amend
-	
+
 	# Branch shortcuts
 	b = branch
 	ba = branch -a
 	bd = branch -d
 	bD = branch -D
-	
+
 	# Checkout shortcuts
 	co = checkout
 	cb = checkout -b
-	
+
 	# Status and diff
 	s = status -s
 	st = status
 	d = diff
 	dc = diff --cached
-	
+
 	# Log shortcuts
 	l = log --oneline --decorate --graph
 	la = log --oneline --decorate --graph --all
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-	
+
 	# Push and pull
 	p = push
 	pl = pull
 	f = fetch
-	
+
 	# Merge and rebase
 	m = merge
 	rb = rebase
 	rbi = rebase -i
-	
+
 	# Remote
 	r = remote
 	rv = remote -v
-	
+
 	# Stash
 	ss = stash save
 	sp = stash pop
 	sl = stash list
-	
+
 	# Quick actions
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	undo = reset --soft HEAD^
-	
+
 	# Show current branch
 	current = rev-parse --abbrev-ref HEAD
 
@@ -140,3 +140,6 @@
 
 [user]
 	signingkey = ~/.ssh/id_ed25519.pub
+
+[safe]
+	directory = /etc/nixos
