@@ -1,20 +1,36 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: cloudflared
+  name: tunnels-pod
   labels:
-    app: cloudflared
+    app: tunnels
 spec:
   hostNetwork: true
   restartPolicy: Always
   containers:
-  - name: cloudflared
-    image: cloudflare/cloudflared:latest
-    imagePullPolicy: Always
-    command: ["cloudflared", "tunnel", "--no-autoupdate", "run", "--token", "$(CF_TOKEN)"]
-    env:
-    - name: CF_TOKEN
-      valueFrom:
-        secretKeyRef:
-          name: cf_token
-          key: CF_TOKEN
+    - name: cloudflared
+      image: cloudflare/cloudflared:latest
+      imagePullPolicy: Always
+      command:
+        - "/bin/sh"
+        - "-c"
+        - "cloudflared tunnel --no-autoupdate run --token $CF_TOKEN"
+      env:
+        - name: CF_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: cf_token
+              key: CF_TOKEN
+
+    # docker run --net=host -it ngrok/ngrok:latest http --url=undefined 80
+    - name: ngrok
+      image: ngrok/ngrok:latest
+      imagePullPolicy: Always
+      command: ["ngrok", "http", "80"]
+      hostNetwork: true
+      env:
+        - name: NGROK_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: ngrok_token
+              key: NGROK_TOKEN
