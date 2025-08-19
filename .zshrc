@@ -13,7 +13,7 @@ echo "[pwd] $(pwd)"
 
 echo "stowing files"
 cd ~/the.files
-stow --adopt -v -R -t ~ .
+stow --adopt -R -t ~ .
 cd -
 
 echo "setting direnv"
