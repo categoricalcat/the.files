@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "mc-fufuland"
+		},
+		{
+			"path": "nixos"
+		},
+		{
+			"path": "the.files"
+		},
+		{
+			"path": ".prompts"
+		},
+		{
+			"path": ".emacs.d"
+		}
+	],
+	"settings": {}
+}
