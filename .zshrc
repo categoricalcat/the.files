@@ -14,6 +14,8 @@ echo "[pwd] $(pwd)"
 echo "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
+echo "stowing nixos"
+stow -R --target=/etc/nixos nixos
 cd -
 
 echo "setting direnv"

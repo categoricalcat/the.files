@@ -12,3 +12,6 @@
 	path = mc-fufuland
 	url = git@github.com:categoricalcat/mc-fufuland.git
     branch = main
+
+# command to sync all submodules
+# git submodule update --init --recursive
