@@ -14,9 +14,13 @@ echo "[pwd] $(pwd)"
 echo "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
-echo "stowing nixos"
-stow -R --target=/etc/nixos nixos
-cd -
+
+if [[ $(whoami) == "fufud" ]]; then
+  echo "stowing nixos"
+  stow -R --target=/etc/nixos nixos
+fi
+
+cd - # return to og
 
 echo "setting direnv"
 eval "$(direnv hook zsh)"
