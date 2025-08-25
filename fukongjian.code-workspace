@@ -9,7 +9,7 @@
 			"name": "nixos"
 		},
 		{
-			"path": "the.files",
+			"path": ".",
 			"name": "dotfiles"
 		},
 		{
