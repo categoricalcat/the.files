@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    network_mode: host
+    restart: always
+    command: ["/bin/sh", "-c", "cloudflared tunnel --no-autoupdate run --token $CF_TOKEN"]
+    environment:
+      - CF_TOKEN=${CF_TOKEN}
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    network_mode: host
+    restart: always
+    command: "ngrok http --domain=${NGROK_URL} 80"
+    environment:
+      - NGROK_TOKEN=${NGROK_TOKEN}
+      - NGROK_URL=bluejay-unique-subtly.ngrok-free.app
+    env_file:
+      - .env
+
+
