@@ -53,8 +53,8 @@ alias zshrc='source ~/.zshrc'
 alias query='~/the.files/query.sh' 
 
 nix-switch() {
-  local host="${1:-fufuwuqi}"
-  local cmd="${2:-switch}"
+  local host="${2:-$HOST}"
+  local cmd="${1:-switch}"
   sudo nixos-rebuild --flake "$HOME/nixos#${host}" --upgrade $cmd
 }
 
