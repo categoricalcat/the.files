@@ -54,7 +54,7 @@ alias query='~/the.files/query.sh'
 
 nix-switch() {
   local host="${2:-$HOST}"
-  local cmd="${1:-switch}"
+  local cmd="${1:-dry-build}"
   sudo nixos-rebuild --flake "$HOME/nixos#${host}" --upgrade $cmd
 }
 
