@@ -1,53 +1,60 @@
-# the.files
+### the.files
 
-lucky dotfiles managed with GNU Stow.
+- Purpose: personal, portable setup for macOS/NixOS (Zsh + Starship, Emacs, NixOS configs, Minecraft tools).
 
-## What's Here
+### Contents
 
-- `.zshrc` - Zsh config with auto-stow, git aliases, docker shortcuts
-- `.config/starship.toml` - Powerline-style prompt
-- `.ssh/config` - SSH client settings
+- Zsh: `.config/zsh/` (aliases, keybindings, completion, fzf/zoxide, env); entry `~/.zshrc`.
+- Starship: `.config/starship.toml` (segmented prompt: Git, runtimes, Docker, time).
+- Emacs: `.emacs.d/` (Prelude-based; Catppuccin theme; Treemacs; TRAMP/server helpers).
+- NixOS: `nixos/` (flake; modular services, networking, users).
+- Minecraft: `mc-fufuland/` (TS scripts, Dockerfiles, compose; Modrinth workflows).
+- Scripts: `usb-ssh.sh`, `query.sh`, helpers referenced by shell aliases.
 
-## Setup
+### Setup (declare and link)
 
-```bash
-cd ~
-git clone [repo-url] the.files
-cd the.files
-stow -v -R -t ~ .
-```
+- Fonts: install a Nerd Font (uses “Maple Mono NF CN”).
+- macOS packages: `zsh`, `starship`, `fzf`, `zoxide`, `fd`, `git`, `node` (or `fnm`/`nvm`), optional `pnpm`.
+- Link config files/dirs:
+  - `~/.zshrc` ← repo `.zshrc`
+  - `~/.config/zsh/` ← repo `.config/zsh/`
+  - `~/.config/starship.toml` ← repo `.config/starship.toml`
+- Shell usage: restart; common aliases `g`, `ll`, `ffsh`, `nix-switch`, `gen-commit`.
 
-Done. Open a new shell.
+### Emacs (declare expectations)
 
-## Features
+- Version: Emacs ≥ 29 (local 30.1).
+- Bootstrap: first run fetches Prelude submodule (or run `~/.emacs.d/install-prelude.sh`).
+- Reload: `C-c r` (reloads `~/.emacs.d/init.el`).
+- UI: Catppuccin (GUI), Treemacs on frame, line numbers/time enabled.
+- Remote: `~/.emacs.d/connect-remote-emacs.sh` sets SSH tunnel and connects client.
 
-**Auto-stow**: Configs update automatically on shell startup.
+### NixOS (flake)
 
-**Zsh goodies**:
-- Git aliases: `ga` (add), `gc` (commit), `gst` (status), etc.
-- Docker shortcuts: `dps`, `dex`, `dlog`
-- Smart history with deduplication
-- SSH greeting via fastfetch
-- Directory stack navigation
+- Root: `nixos/`.
+- Rebuild (see `nix-switch`): `sudo nixos-rebuild --flake "$HOME/nixos#<hostname>" --upgrade switch`.
 
-**Starship prompt**: Shows git status, language versions, docker context.
+### Minecraft (mc-fufuland)
 
-## Manual Stow
+- Node/TS tools for Modrinth; server build assets.
+- Check: `mc-fufuland/compose.yaml`, `mc-fufuland/scripts/*`.
 
-```bash
-# Update all symlinks
-cd ~/the.files && stow -v -R .
+### Notable paths
 
-# Remove symlinks
-cd ~/the.files && stow -v -D .
+- `.config/zsh/aliases.zsh` (Git/Podman/NixOS aliases)
+- `.config/zsh/fzf-zoxide.zsh` (fzf defaults, zoxide init)
+- `.config/zsh/environment.zsh` (PATH additions)
+- `.emacs.d/init.el` (entry; Prelude, personal lisp, theme, Treemacs, server/TRAMP)
+- `.emacs.d/scripts/symlinks.sh` (reads `symlinks.csv` to link dotfiles)
+- `usb-ssh.sh` (USB networking + SSH helper)
 
-# Stow specific file
-cd ~/the.files && stow -v -t ~ .zshrc
-```
+### Conventions
 
-## Dependencies
+- `$HOME` must be correct. Scripts are POSIX shell or Zsh. Nerd Font recommended.
 
-- GNU Stow
-- Zsh
-- Starship
-- fastfetch (optional) 
+### License and links
+
+- License: see `LICENSE`.
+- Upstream: `Prelude` (github.com/bbatsov/prelude), `Starship` (starship.rs), `Modrinth` (modrinth.com).
+
+
