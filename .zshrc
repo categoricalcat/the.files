@@ -25,8 +25,11 @@ cd - # return to og
 echo "setting direnv"
 eval "$(direnv hook zsh)"
 
-echo "setting starship"
-eval "$(starship init zsh)"
+# if terminal is not dumb, then set starship
+if [[ $TERM != "dumb" ]]; then
+  echo "setting starship"
+  eval "$(starship init zsh)"
+fi
 
 for config in ~/the.files/.config/zsh/*.zsh; do
     echo "Sourcing $config"
