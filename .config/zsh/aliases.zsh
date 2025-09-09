@@ -1,8 +1,8 @@
 # Git aliases - Now using git aliases directly in ~/.gitconfig
 # Common shortcuts still available for muscle memory
-alias g='git'
-alias gst='git status'
-alias glog='git log --oneline --decorate --graph'
+# alias g='git'
+# alias gst='git status'
+# alias glog='git log --oneline --decorate --graph'
 
 # Directory shortcuts
 alias -g ...='../..'
@@ -42,9 +42,9 @@ alias pinfo='podman info'
 alias pversion='podman version'
 
 # Other useful aliases
-alias ll='ls -alh'
-alias la='ls -A'
-alias l='ls -CF'
+# alias ll='ls -alh'
+# alias la='ls -A'
+# alias l='ls -CF'
 alias ..='cd ..'
 alias grep='grep --color=auto'
 

@@ -32,7 +32,7 @@ if [[ $TERM != "dumb" ]]; then
 fi
 
 echo "setting scm_breeze"
-[ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ] && source "$HOME/the.files/scm_breeze/scm_breeze.sh"
+source "$HOME/the.files/scm_breeze/scm_breeze.sh"
 
 for config in ~/the.files/.config/zsh/*.zsh; do
     echo "Sourcing $config"
