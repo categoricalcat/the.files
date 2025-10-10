@@ -63,3 +63,10 @@ alias gh-pr="gh pr create -a @me --fill-verbose -B $1"
 alias gen-commit="~/the.files/git-commit-msg.sh"
 alias usb-ssh="~/the.files/usb-ssh.sh"
 alias ffsh="ssh ssh.fufu.land || ssh fufud"
+# open jira in browser like "jira some-company SC-1234"
+function jira() {
+  local company="$1"
+  local ticket="$2"
+  local url="https://${company}.atlassian.net/browse/${ticket}"
+  echo "$url"
+}
