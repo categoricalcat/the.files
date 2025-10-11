@@ -13,12 +13,12 @@
 			"name": "dotfiles"
 		},
 		{
-			"path": ".prompts",
+			"path": "../.prompts",
 			"name": "prompts"
 		},
 		{
-			"path": ".emacs.d",
-			"name": "emacs"
+			"path": "./emacs.d",
+			"name": "femacs"
 		}
 	],
 	"settings": {

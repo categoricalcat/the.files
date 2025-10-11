@@ -52,14 +52,39 @@ alias grep='grep --color=auto'
 alias zshrc='source ~/.zshrc'
 alias query='~/the.files/query.sh' 
 
-nix-switch() {
-  local host="${2:-$HOST}"
-  local cmd="${1:-dry-build}"
-  sudo nixos-rebuild --flake "$HOME/nixos#${host}" --upgrade $cmd
-}
 
 alias nix-dr="sudo nixos-rebuild dry-run"
 alias gh-pr="gh pr create -a @me --fill-verbose -B $1"
 alias gen-commit="~/the.files/git-commit-msg.sh"
 alias usb-ssh="~/the.files/usb-ssh.sh"
 alias ffsh="ssh ssh.fufu.land || ssh fufud"
+
+nixswitch() {
+  local host="${2:-$HOST}"
+  local cmd="${1:-dry-build}"
+  local remote="${3:-fufud.vpn}"
+
+  local rebuild_args=(
+    "$cmd"
+    --flake "$HOME/the.files/nixos#${host}"
+    --upgrade
+    --build-host "$remote"
+    --show-trace
+    --print-build-logs
+  )
+
+  echo "nixos-rebuild ${rebuild_args[@]}"
+
+  if ! sudo nixos-rebuild "${rebuild_args[@]}"; then
+    echo "\nbruh moment" >&2
+    return 1
+  fi
+}
+
+# open jira in browser like "jira some-company SC-1234"
+function jira() {
+  local company="$1"
+  local ticket="$2"
+  local url="https://${company}.atlassian.net/browse/${ticket}"
+  echo "$url"
+}
