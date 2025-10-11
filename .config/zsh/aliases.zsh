@@ -80,3 +80,11 @@ nixswitch() {
     return 1
   fi
 }
+
+# open jira in browser like "jira some-company SC-1234"
+function jira() {
+  local company="$1"
+  local ticket="$2"
+  local url="https://${company}.atlassian.net/browse/${ticket}"
+  echo "$url"
+}
