@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 #
 # 福福的zsh配置
-# 
+#
 
 # Removed 'set -e -o' - this was causing SSH sessions to close on any error
 # setopt xtrace
@@ -10,6 +10,9 @@ echo "福福的zsh配置"
 echo "[uid] $(id -u)"
 echo "[iam] $(whoami)"
 echo "[pwd] $(pwd)"
+
+# Exit if not an interactive shell.
+[ -z "$PS1" ] && return
 
 echo "stowing files"
 cd ~/the.files
