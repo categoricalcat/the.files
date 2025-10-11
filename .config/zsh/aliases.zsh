@@ -59,28 +59,6 @@ alias gen-commit="~/the.files/git-commit-msg.sh"
 alias usb-ssh="~/the.files/usb-ssh.sh"
 alias ffsh="ssh ssh.fufu.land || ssh fufud"
 
-nixswitch() {
-  local host="${2:-$HOST}"
-  local cmd="${1:-dry-build}"
-  local remote="${3:-fufud.vpn}"
-
-  local rebuild_args=(
-    "$cmd"
-    --flake "$HOME/the.files/nixos#${host}"
-    --upgrade
-    --build-host "$remote"
-    --show-trace
-    --print-build-logs
-  )
-
-  echo "nixos-rebuild ${rebuild_args[@]}"
-
-  if ! sudo nixos-rebuild "${rebuild_args[@]}"; then
-    echo "\nbruh moment" >&2
-    return 1
-  fi
-}
-
 # open jira in browser like "jira some-company SC-1234"
 function jira() {
   local company="$1"
