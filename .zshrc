@@ -19,8 +19,8 @@ cd ~/the.files
 stow --adopt -R -t ~ .
 
 if [[ $(whoami) == "fufud" ]]; then
-  echo "stowing nixos"
-  stow -R --target=/etc/nixos nixos
+  echo "linking nixos"
+  stow -R -t /etc/nixos nixos
 fi
 
 cd - # return to og
@@ -46,3 +46,5 @@ echo "hello, gently, from self :3"
 if [[ -n "${SSH_CONNECTION:-}" ]]; then
   fastfetch
 fi
+
+[ -s "/home/fufud/.scm_breeze/scm_breeze.sh" ] && source "/home/fufud/.scm_breeze/scm_breeze.sh"
