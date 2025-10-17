@@ -48,3 +48,7 @@ if [[ -n "${SSH_CONNECTION:-}" ]]; then
 fi
 
 [ -s "/home/fufud/.scm_breeze/scm_breeze.sh" ] && source "/home/fufud/.scm_breeze/scm_breeze.sh"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
