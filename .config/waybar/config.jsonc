@@ -4,7 +4,7 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "group/usage"],
+    "modules-left": ["niri/workspaces", "group/usage"],
     "modules-center": ["clock"],
     "modules-right": ["wireplumber", "group/bat", "group/net", "tray"],
 
@@ -20,10 +20,10 @@
 
     "group/net": {
         "orientation": "horizontal",
-        "modules": ["hyprland/language", "network", "bluetooth"]
+        "modules": ["niri/language", "network", "bluetooth"]
     },
 
-    "hyprland/workspaces": {
+    "niri/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
@@ -94,7 +94,7 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
-    "hyprland/language": {
+    "niri/language": {
         "format": "{short}"
     },
 
