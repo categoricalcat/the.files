@@ -34,8 +34,10 @@ if [[ $TERM != "dumb" ]]; then
   eval "$(starship init zsh)"
 fi
 
-echo "setting scm_breeze"
-source "$HOME/the.files/scm_breeze/scm_breeze.sh"
+if [ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ]; then
+  echo "sourcing scm_breeze"
+  source "$HOME/the.files/scm_breeze/scm_breeze.sh"
+fi
 
 for config in ~/the.files/.config/zsh/*.zsh; do
     echo "Sourcing $config"
@@ -47,8 +49,5 @@ if [[ -n "${SSH_CONNECTION:-}" ]]; then
   fastfetch
 fi
 
-[ -s "/home/fufud/.scm_breeze/scm_breeze.sh" ] && source "/home/fufud/.scm_breeze/scm_breeze.sh"
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
