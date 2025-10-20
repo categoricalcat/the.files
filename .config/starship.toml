@@ -40,7 +40,7 @@ style = "fg:#E84855"
 disabled = true # Disabled by default
 
 [hostname]
-ssh_only = true
+ssh_only = false
 style = "fg:#E84855"
 format = "[@$hostname ]($style)"
 

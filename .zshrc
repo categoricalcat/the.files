@@ -10,6 +10,7 @@ echo "福福的zsh配置"
 echo "[uid] $(id -u)"
 echo "[iam] $(whoami)"
 echo "[pwd] $(pwd)"
+echo "[host] $(hostname)"
 
 # Exit if not an interactive shell.
 [ -z "$PS1" ] && return
