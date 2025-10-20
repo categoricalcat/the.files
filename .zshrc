@@ -6,6 +6,12 @@
 # Removed 'set -e -o' - this was causing SSH sessions to close on any error
 # setopt xtrace
 
+vecho() {
+  if [[ -n ${VECHO:-} ]]; then
+    echo "$@"
+  fi
+}
+
 echo "福福的zsh配置"
 echo "[uid] $(id -u)"
 echo "[iam] $(whoami)"
@@ -15,33 +21,33 @@ echo "[host] $(hostname)"
 # Exit if not an interactive shell.
 [ -z "$PS1" ] && return
 
-echo "stowing files"
+vecho "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
 
 if [[ $(whoami) == "fufud" ]]; then
-  echo "linking nixos"
+  vecho "linking nixos"
   stow -R -t /etc/nixos nixos
 fi
 
-cd - # return to og
+cd - > /dev/null # return to og
 
-echo "setting direnv"
+vecho "setting direnv"
 eval "$(direnv hook zsh)"
 
 # if terminal is not dumb, then set starship
 if [[ $TERM != "dumb" ]]; then
-  echo "setting starship"
+  vecho "setting starship"
   eval "$(starship init zsh)"
 fi
 
 if [ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ]; then
-  echo "sourcing scm_breeze"
+  vecho "sourcing scm_breeze"
   source "$HOME/the.files/scm_breeze/scm_breeze.sh"
 fi
 
 for config in ~/the.files/.config/zsh/*.zsh; do
-    echo "Sourcing $config"
+    vecho "Sourcing $config"
     source "$config"
 done
 
