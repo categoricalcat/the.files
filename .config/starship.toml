@@ -2,15 +2,14 @@
 
 format = """
 [道 ](fg:#E84855)\
-[](#E84855)\
 $os\
-$username\
-[](bg:#F9A03F fg:#E84855)\
-$directory\
-[](bg:#F3DE2C fg:#F9A03F)\
+$username$hostname\
+ \
+$directory \
+ \
 $git_branch\
 $git_status\
-[](bg:#7AC74F fg:#F3DE2C)\
+ \
 $c\
 $elixir\
 $elm\
@@ -23,11 +22,10 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](bg:#2D82B7 fg:#7AC74F)\
+ \
 $docker_context\
-[](bg:#9C59D1 fg:#2D82B7)\
-$time[](bg:#9C59D1 fg:#FFFFFF)\
-[ ](fg:#9C59D1)\
+ \
+$time\
 """
 
 # Disable the blank line at the start of the prompt
@@ -35,17 +33,22 @@ $time[](bg:#9C59D1 fg:#FFFFFF)\
 
 [username]
 show_always = true
-style_user = "bg:#E84855 fg:#FFFFFF"
-style_root = "bg:#E84855 fg:#FFFFFF"
-format = '[$user ]($style)'
+style_user = "fg:#E84855"
+style_root = "fg:#E84855"
+format = '[$user]($style)'
 disabled = false
 
 [os]
-style = "bg:#E84855 fg:#FFFFFF"
+style = "fg:#E84855"
 disabled = true # Disabled by default
 
+[hostname]
+ssh_only = true
+style = "fg:#E84855"
+format = "[@$hostname ]($style)"
+
 [directory]
-style = "bg:#F9A03F fg:#2C2C2C"
+style = "fg:#F9A03F"
 format = "[$path]($style)"
 truncation_length = 3
 truncation_symbol = "径 "
@@ -57,71 +60,71 @@ truncation_symbol = "径 "
 "Pictures" = " "
 
 [c]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [cpp]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [docker_context]
-style = "bg:#2D82B7 fg:#FFFFFF"
+style = "fg:#2D82B7"
 format = '[ $context ]($style)'
 
 [elixir]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [elm]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [git_branch]
 symbol = "支 "
-style = "bg:#F3DE2C fg:#2C2C2C"
+style = "fg:#F3DE2C"
 format = '[$symbol$branch ]($style)'
 
 [git_status]
-style = "bg:#F3DE2C fg:#2C2C2C"
-format = '[$all_status$ahead_behind]($style)'
+style = "fg:#F3DE2C"
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-format = '[ ($version) ](bg:#7AC74F fg:#FFFFFF)'
+format = '[($version) ](fg:#7AC74F)'
 
 [nim]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [rust]  
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [scala]
-style = "bg:#7AC74F fg:#FFFFFF"
+style = "fg:#7AC74F"
 format = '[ ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#9C59D1 fg:#FFFFFF"
+style = "fg:#9C59D1"
 format = '[爱 $time ]($style)'
