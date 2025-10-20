@@ -128,5 +128,5 @@ format = '[爱 $time]($style)'
 
 [character]
 # 入: enter/input; 错: error;
-success_symbol = "[入](fg:#9C59D1)"
-error_symbol = "[错](fg:#E84855)"
+success_symbol = "[入](fg:#E84855)"
+error_symbol = "[错](fg:#777777)"
