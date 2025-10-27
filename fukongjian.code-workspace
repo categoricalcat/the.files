@@ -28,6 +28,7 @@
 			"**/.idea": true,
 			"**/.vscode": true,
 			"**/.vscode-server": true,
+			"**/scm_breeze": true,
 		}
 	}
 }

@@ -6,7 +6,7 @@
 	defaultBranch = main
 
 [core]
-	sshCommand = ssh
+	sshCommand = ssh -T
 	editor = emacs
 	autocrlf = input
 
