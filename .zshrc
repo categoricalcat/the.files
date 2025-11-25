@@ -51,10 +51,9 @@ for config in ~/the.files/.config/zsh/*.zsh; do
     source "$config"
 done
 
+export TERM=xterm-256color
+
 echo "hello, gently, from self :3"
 if [[ -n "${SSH_CONNECTION:-}" ]]; then
   fastfetch
 fi
-
-
-
