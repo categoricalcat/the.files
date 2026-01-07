@@ -15,9 +15,13 @@ environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORM "wayland"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
-  QT_QPA_PLATFORMTHEME "gtk3"
-  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  QT_QPA_PLATFORMTHEME "qt6ct"
+  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
   TERMINAL "alacritty"
+}
+
+overview {
+    backdrop-color "#010101" 
 }
 
 input {
@@ -93,7 +97,7 @@ output "eDP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2880x1800@120.000"
+    mode "2880x1800@60"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1.5
@@ -120,6 +124,7 @@ output "eDP-1" {
 layout {
     // Set gaps around windows in logical pixels.
     gaps 4
+    background-color "transparent"
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -167,7 +172,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1
+        width 0.5
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -175,7 +180,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#b4befe"
+        active-color "#b4befe99"
 
         // Color of the ring on inactive monitors.
         //
