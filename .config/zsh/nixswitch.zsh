@@ -5,6 +5,14 @@ nixswitch() {
   local cmd="${1:-dry-build}"
   local remote="${3:-fufud.vpn}"
 
+  if [ -e "flake.nix" ]; then
+      local flake_folder="."
+  else
+      local flake_folder="$HOME/the.files/nixos"
+  fi
+
+  echo "running from $flake_folder"
+
   local rebuild_args=(
     "$cmd"
     --flake "$HOME/the.files/nixos#${host}"
