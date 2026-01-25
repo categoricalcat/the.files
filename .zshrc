@@ -21,6 +21,15 @@ echo "[host] $(hostname)"
 # Exit if not an interactive shell.
 [ -z "$PS1" ] && return
 
+if [[ "$TERM" == "dumb" ]]; then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+
+  PS1='$ ' 
+  return
+fi
+
 vecho "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
@@ -35,11 +44,8 @@ cd - > /dev/null # return to og
 vecho "setting direnv"
 eval "$(direnv hook zsh)"
 
-# if terminal is not dumb, then set starship
-if [[ $TERM != "dumb" ]]; then
-  vecho "setting starship"
-  eval "$(starship init zsh)"
-fi
+vecho "setting starship"
+eval "$(starship init zsh)"
 
 if [ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ]; then
   vecho "sourcing scm_breeze"
