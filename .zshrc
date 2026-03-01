@@ -34,7 +34,7 @@ vecho "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
 
-if [[ $(whoami) == "fufud" ]]; then
+if [[ $(whoami) == "yi" ]]; then
   vecho "linking nixos"
   stow -R -t /etc/nixos nixos
 fi
