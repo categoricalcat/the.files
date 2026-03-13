@@ -34,11 +34,6 @@ vecho "stowing files"
 cd ~/the.files
 stow --adopt -R -t ~ .
 
-if [[ $(whoami) == "yi" ]]; then
-  vecho "linking nixos"
-  stow -R -t /etc/nixos nixos
-fi
-
 cd - > /dev/null # return to og
 
 vecho "setting direnv"
