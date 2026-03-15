@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 #
-# 福福的zsh配置
+# 伊的zsh配置
 #
 
 # Removed 'set -e -o' - this was causing SSH sessions to close on any error
@@ -26,7 +26,7 @@ if [[ "$TERM" == "dumb" ]]; then
   unsetopt prompt_cr
   unsetopt prompt_subst
 
-  PS1='$ ' 
+  PS1='$ '
   return
 fi
 
