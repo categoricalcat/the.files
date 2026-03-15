@@ -12,7 +12,7 @@ vecho() {
   fi
 }
 
-echo "福福的zsh配置"
+echo "伊的zsh配置"
 echo "[uid] $(id -u)"
 echo "[iam] $(whoami)"
 echo "[pwd] $(pwd)"
