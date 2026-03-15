@@ -1,21 +1,21 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
-	url = git@github.com:categoricalcat/.emacs.d.git
+	url = https://github.com/categoricalcat/.emacs.d.git
     branch = main
 
 [submodule "nixos"]
 	path = nixos
-	url = git@github.com:categoricalcat/nixos.git
+	url = https://github.com/categoricalcat/nixos.git
     branch = main
 
 [submodule "mc-fufuland"]
 	path = mc-fufuland
-	url = git@github.com:categoricalcat/mc-fufuland.git
+	url = https://github.com/categoricalcat/mc-fufuland.git
     branch = main
 
 [submodule "scm_breeze"]
 	path = scm_breeze
-	url = git@github.com:scmbreeze/scm_breeze.git
+	url = https://github.com/scmbreeze/scm_breeze.git
     branch = main
 
 # command to sync all submodules
