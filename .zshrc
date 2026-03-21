@@ -26,7 +26,7 @@ if [[ "$TERM" == "dumb" ]]; then
   unsetopt prompt_cr
   unsetopt prompt_subst
 
-  PS1='$ '
+  PS1='...$ ' 
   return
 fi
 
@@ -42,9 +42,13 @@ eval "$(direnv hook zsh)"
 vecho "setting starship"
 eval "$(starship init zsh)"
 
-if [ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ]; then
+# scm_breeze setup
+if [ -s "$HOME/.scm_breeze/scm_breeze.sh" ]; then
   vecho "sourcing scm_breeze"
-  source "$HOME/the.files/scm_breeze/scm_breeze.sh"
+  source "$HOME/.scm_breeze/scm_breeze.sh"
+else
+  vecho "scm_breeze not found, installing"
+  source "$HOME/the.files/scm_breeze/install.sh"
 fi
 
 for config in ~/the.files/.config/zsh/*.zsh; do
@@ -55,6 +59,8 @@ done
 export TERM=xterm-256color
 
 echo "hello, gently, from self :3"
+
 if [[ -n "${SSH_CONNECTION:-}" ]]; then
   fastfetch
 fi
+
