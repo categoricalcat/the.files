@@ -6,7 +6,7 @@
 [submodule "nixos"]
 	path = nixos
 	url = https://github.com/categoricalcat/nixos.git
-    branch = main
+    branch = develop
 
 [submodule "mc-fufuland"]
 	path = mc-fufuland
