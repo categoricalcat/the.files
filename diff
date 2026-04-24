@@ -1,0 +1,1363 @@
+diff --git a/.cursor/debug-73dad3.log b/.cursor/debug-73dad3.log
+new file mode 100644
+index 0000000..09f671e
+--- /dev/null
++++ b/.cursor/debug-73dad3.log
+@@ -0,0 +1,16 @@
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H1","location":"apu-debug.sh:btop-check","message":"btop-rpath-and-libs","data":{"binary":"/nix/store/d20qiw224x8crgajq2wmcsc7gcv2a7pj-btop-1.4.5/bin/btop","runpath":"/nix/store/pdwlyjkmc6icc0wb5gaw08m9ynqrg683-glibc-2.40-218/lib:/nix/store/1xw5xccqqh1xw3mvd70hyil6x418wxcm-gcc-14.3.0-lib/lib:/nix/store/7krcsxgwr7srmbfkzp259sywnqa797pa-rocm-smi-6.4.3/lib:","rocm_dirs_in_rpath":1,"librocm_smi64_in_rpath_dir":true,"dlopen_test":"OK:librocm_smi64.so\n"},"timestamp":1776970663814}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H9","location":"apu-debug.sh:devices","message":"kfd-perms","data":{"kfd_mode":"666 root:render","renderD128_mode":"666 root:render"},"timestamp":1776970663823}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H3","location":"apu-debug.sh:user-list-devices","message":"compare-with-vs-without-override","data":{"no_override":"ggml_cuda_init: found 1 ROCm devices (Total VRAM: 9888 MiB):\n  Device 0: AMD Radeon 680M, gfx1035 (0x1035), VMM: no, Wave Size: 32, VRAM: 9888 MiB\nAvailable devices:\n  ROCm0: AMD Radeon 680M (9888 MiB, 7079 MiB free)\n","with_override_10_3_0":"ggml_cuda_init: found 1 ROCm devices (Total VRAM: 9888 MiB):\n  Device 0: AMD Radeon 680M, gfx1030 (0x1030), VMM: no, Wave Size: 32, VRAM: 9888 MiB\nAvailable devices:\n  ROCm0: AMD Radeon 680M (9888 MiB, 7076 MiB free)\n"},"timestamp":1776970664000}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:snap_gpu","message":"gpu-state-before","data":{"vram_used":25067520,"vram_total":4294967296,"gtt_used":9291431936,"gtt_total":10368782336,"gpu_busy_percent":0},"timestamp":1776970664015}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:load","message":"issuing-load-request","data":{"model":"granite4:3b"},"timestamp":1776970664017}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:load","message":"load-response","data":{"response":"{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How\"}}],\"created\":1776970664,\"model\":\"ibm-granite/granite-3.3-2b-instruct-GGUF:Q4_K_M\",\"system_fingerprint\":\"b8770-82764d8\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":3,\"prompt_tokens\":59,\"total_tokens\":62,\"prompt_tokens_details\":{\"cached_tokens\":58}},\"id\":\"chatcmpl-VkfcvjVN4pPkkNE8oZ8iJ5N8"},"timestamp":1776970664161}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:snap_gpu","message":"gpu-state-after-load","data":{"vram_used":25026560,"vram_total":4294967296,"gtt_used":9291431936,"gtt_total":10368782336,"gpu_busy_percent":0},"timestamp":1776970665176}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:snap_gpu","message":"gpu-state-hot-1","data":{"vram_used":25026560,"vram_total":4294967296,"gtt_used":9291431936,"gtt_total":10368782336,"gpu_busy_percent":0},"timestamp":1776970666193}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:snap_gpu","message":"gpu-state-hot-2","data":{"vram_used":25026560,"vram_total":4294967296,"gtt_used":9291431936,"gtt_total":10368782336,"gpu_busy_percent":0},"timestamp":1776970667210}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7,H8","location":"apu-debug.sh:snap_gpu","message":"gpu-state-hot-3","data":{"vram_used":25026560,"vram_total":4294967296,"gtt_used":9291431936,"gtt_total":10368782336,"gpu_busy_percent":0},"timestamp":1776970668227}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6,H7","location":"apu-debug.sh:service","message":"ls-cmdline","data":{"cmdline":"/nix/store/3lsjpja5c8vclyvk9vpr07w0mfnnmw9d-llama-cpp-8770/bin/llama-server --port 5803 -hf ibm-granite/granite-3.3-2b-instruct-GGUF:Q4_K_M -ngl 99 -fa on --no-webui --log-file /var/log/llama-swap-dbg2/server.log --verbose --jinja "},"timestamp":1776970668255}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H6","location":"apu-debug.sh:service","message":"llama-server-env","data":{"pid":147098,"env_subset":"PATH=/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/bin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/bin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/bin:/nix/store/y2rzx7s3kr3v95rsrl2141s8vaa4mkjf-systemd-258.5/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/sbin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/sbin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/sbin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/sbin:/nix/store/y2rzx7s3kr3v95rsrl2141s8vaa4mkjf-systemd-258.5/sbin\nLLAMA_CACHE=/var/cache/llama-swap\nHSA_OVERRIDE_GFX_VERSION=10.3.0\n"},"timestamp":1776970668299}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H11,H12,H13","location":"apu-debug.sh:probe","message":"service-sandbox-list-devices","data":{"path":"/var/log/private/llama-swap-dbg2/list-devices.log","output":"ggml_cuda_init: found 1 ROCm devices (Total VRAM: 9888 MiB):\n  Device 0: AMD Radeon 680M, gfx1030 (0x1030), VMM: no, Wave Size: 32, VRAM: 9888 MiB\nggml_backend_cuda_get_available_uma_memory: failed to open /proc/meminfo\nggml_backend_cuda_device_get_memory: /proc/meminfo reading failed, using cudaMemGetInfo\nAvailable devices:\n  ROCm0: AMD Radeon 680M (9888 MiB, 9884 MiB free)\n"},"timestamp":1776970668321}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H7,H8","location":"apu-debug.sh:llama-log","message":"log-head-tail","data":{"path":"/var/log/private/llama-swap-dbg2/server.log","size":135330,"head":"common_download_file_single_online: no previous model file found /var/cache/llama-swap/ibm-granite_granite-3.3-2b-instruct-GGUF_preset.ini\ncommon_download_file_single_online: HEAD failed, status: 404\nno remote preset found, skipping\ncommon_download_file_single_online: using cached file: /var/cache/llama-swap/models--ibm-granite--granite-3.3-2b-instruct-GGUF/snapshots/7cdf86ccd1f1bb3491c9b7017b033f2e51367397/granite-3.3-2b-instruct-Q4_K_M.gguf\nmain: n_parallel is set to auto, using n_parallel = 4 and kv_unified = true\nbuild_info: b8770-82764d8\nsystem_info: n_threads = 8 (n_threads_batch = 8) / 16 | ROCm : NO_VMM = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | \nRunning without SSL\ninit: using 15 threads for HTTP server\nWeb UI is disabled\nstart: binding port with default address family\nmain: loading model\nsrv    load_model: loading model '/var/cache/llama-swap/models--ibm-granite--granite-3.3-2b-instruct-GGUF/snapshots/7cdf86ccd1f1bb3491c9b7017b033f2e51367397/granite-3.3-2b-instruct-Q4_K_M.gguf'\ncommon_init_result: fitting params to device memory, for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on\nllama_params_fit_impl: getting device memory data for initial parameters:\nggml_backend_cuda_get_available_uma_memory: failed to open /proc/meminfo\nggml_backend_cuda_device_get_memory: /proc/meminfo reading failed, using cudaMemGetInfo\nggml_backend_cuda_get_available_uma_memory: failed to open /proc/meminfo\nggml_backend_cuda_device_get_memory: /proc/meminfo reading failed, using cudaMemGetInfo\nllama_model_load_from_file_impl: using device ROCm0 (AMD Radeon 680M) (0000:05:00.0) - 9884 MiB free\nllama_model_loader: loaded meta data with 40 key-value pairs and 362 tensors from /var/cache/llama-swap/models--ibm-granite--granite-3.3-2b-instruct-GGUF/snapshots/7cdf86ccd1f1bb3491c9b7017b033f2e51367397/granite-3.3-2b-instruct-Q4_K_M.gguf (version GGUF V3 (latest))\nllama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.\nllama_model_loader: - kv   0:                       general.architecture str              = granite\nllama_model_loader: - kv   1:                               general.type str              = model\nllama_model_loader: - kv   2:                               general.name str              = Granite 3.3 2b Instruct\nllama_model_loader: - kv   3:                           general.finetune str              = instruct\nllama_model_loader: - kv   4:                           general.basename str              = granite-3.3\nllama_model_loader: - kv   5:                         general.size_label str              = 2B\nllama_model_loader: - kv   6:                            general.license str              = apache-2.0\nllama_model_loader: - kv   7:                   general.base_model.count u32              = 1\nllama_model_loader: - kv   8:                  general.base_model.0.name str              = Granite 3.3 2b Base\nllama_model_loader: - kv   9:          general.base_model.0.organization str              = Ibm Granite\nllama_model_loader: - kv  10:              general.base_model.0.repo_url str              = https://huggingface.co/ibm-granite/gr...\nllama_model_loader: - kv  11:                               general.tags arr[str,3]       = [\"language\", \"granite-3.3\", \"text-gen...\nllama_model_loader: - kv  12:                        granite.block_count u32              = 40\nllama_model_loader: - kv  13:                     granite.context_length u32              = 131072\nllama_model_loader: - kv  14:                   granite.embedding_length u32              = 2048\nllama_model_loader: - kv  15:                granite.feed_forward_length u32              = 8192\nllama_model_loader: - kv  16:               granite.attention.head_count u32              = 32\nllama_model_loader: - kv  17:            granite.attention.head_count_kv u32              = 8\nllama_model_loader: - kv  18:                     granite.rope.freq_base f32              = 10000000.000000\nllama_model_loader: - kv  19:   granite.attention.layer_norm_rms_epsilon f32              = 0.000010\nllama_model_loader: - kv  20:                         granite.vocab_size u32              = 49159\nllama_model_loader: - kv  21:               granite.rope.dimension_count u32              = 64\nllama_model_loader: - kv  22:                    granite.attention.scale f32              = 0.015625\nllama_model_loader: - kv  23:                    granite.embedding_scale f32              = 12.000000\nllama_model_loader: - kv  24:                     granite.residual_scale f32              = 0.220000\nllama_model_loader: - kv  25:                        granite.logit_scale f32              = 8.000000\nllama_model_loader: - kv  26:                       tokenizer.ggml.model str              = gpt2\nllama_model_loader: - kv  27:                         tokenizer.ggml.pre str              = refact\nllama_model_loader: - kv  28:                      tokenizer.ggml.tokens arr[str,49159]   = [\"<|end_of_text|>\", \"<fim_prefix>\", \"...\nllama_model_loader: - kv  29:                  tokenizer.ggml.token_type arr[i32,49159]   = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...\nllama_model_loader: - kv  30:                      tokenizer.ggml.merges arr[str,48891]   = [\"\u0120 \u0120\", \"\u0120\u0120 \u0120\u0120\", \"\u0120\u0120\u0120\u0120 \u0120\u0120...\nllama_model_loader: - kv  31:                tokenizer.ggml.bos_token_id u32              = 0\nllama_model_loader: - kv  32:                tokenizer.ggml.eos_token_id u32              = 0\nllama_model_loader: - kv  33:            tokenizer.ggml.unknown_token_id u32              = 0\nllama_model_loader: - kv  34:            tokenizer.ggml.padding_token_id u32              = 0\nllama_model_loader: - kv  35:               tokenizer.ggml.add_bos_token bool             = false\nllama_model_loader: - kv  36:                    tokenizer.chat_template str              = {# Alias tools -> available_tools #}\\n...\nllama_model_loader: - kv  37:            tokenizer.ggml.add_space_prefix bool             = false\nllama_model_loader: - kv  38:               general.quantization_version u32              = 2\nllama_model_loader: - kv  39:                          general.file_type u32              = 15\nllama_model_loader: - type  f32:   81 tensors\nllama_model_loader: - type q4_K:  240 tensors\nllama_model_loader: - type q6_K:   41 tensors\nprint_info: file format = GGUF V3 (latest)\nprint_info: file type   = Q4_K - Medium\nprint_info: file size   = 1.44 GiB (4.87 BPW) \ninit_tokenizer: initializing tokenizer for type 2\nload: 0 unused tokens\nload: control token:  49156 '<|end_of_cite|>' is not marked as EOG\nload: control token:  49157 '<|start_of_plugin|>' is not marked as EOG\nload: control token:      2 '<fim_middle>' is not marked as EOG\nload: control token:     13 '<jupyter_output>' is not marked as EOG\nload: control token:      9 '<issue_closed>' is not marked as EOG\nload: control token:      6 '<gh_stars>' is not marked as EOG\nload: control token:     10 '<jupyter_start>' is not marked as EOG\nload: control token:     14 '<empty_output>' is not marked as EOG\nload: control token:     15 '<commit_before>' is not marked as EOG\nload: control token:      5 '<filename>' is not marked as EOG\nload: control token:     12 '<jupyter_code>' is not marked as EOG\nload: control token:      7 '<issue_start>' is not marked as EOG\nload: control token:      3 '<fim_suffix>' is not marked as EOG\nload: control token:      1 '<fim_prefix>' is not marked as EOG\nload: control token:      8 '<issue_comment>' is not marked as EOG\nload: control token:     11 '<jupyter_text>' is not marked as EOG\nload: control token:     16 '<commit_msg>' is not marked as EOG\nload: control token:  49152 '<|start_of_role|>' is not marked as EOG\nload: control token:  49155 '<|start_of_cite|>' is not marked as EOG\nload: control token:  49154 '<|tool_call|>' is not marked as EOG\nload: control token:  49153 '<|end_of_role|>' is not marked as EOG\nload: control token:     17 '<commit_after>' is not marked as EOG\nload: control token:  49158 '<|end_of_plugin|>' is not marked as EOG\nload: printing all EOG tokens:\nload:   - 0 ('<|end_of_text|>')\nload:   - 4 ('<fim_pad>')\nload:   - 18 ('<reponame>')\nload: special tokens cache size = 26\nload: token to piece cache size = 0.2827 MB\nprint_info: arch                  = granite\nprint_info: vocab_only            = 0\nprint_info: no_alloc              = 1\nprint_info: n_ctx_train           = 131072\nprint_info: n_embd                = 2048\nprint_info: n_embd_inp            = 2048\nprint_info: n_layer               = 40\nprint_info: n_head                = 32\nprint_info: n_head_kv             = 8\nprint_info: n_rot                 = 64\nprint_info: n_swa                 = 0\nprint_info: is_swa_any            = 0\nprint_info: n_embd_head_k         = 64\nprint_info: n_embd_head_v         = 64\nprint_info: n_gqa                 = 4\nprint_info: n_embd_k_gqa          = 512\nprint_info: n_embd_v_gqa          = 512\nprint_info: f_norm_eps            = 0.0e+00\nprint_info: f_norm_rms_eps        = 1.0e-05\nprint_info: f_clamp_kqv           = 0.0e+00\nprint_info: f_max_alibi_bias      = 0.0e+00\nprint_info: f_logit_scale         = 8.0e+00\nprint_info: f_attn_scale          = 1.6e-02\nprint_info: n_ff                  = 8192\nprint_info: n_expert              = 0\nprint_info: n_expert_used         = 0\nprint_info: n_expert_groups       = 0\nprint_info: n_group_used          = 0\nprint_info: causal attn           = 1\nprint_info: pooling type          = -1\nprint_info: rope type             = 0\nprint_info: rope scaling          = linear\nprint_info: freq_base_train       = 10000000.0\nprint_info: freq_scale_train      = 1\nprint_info: n_ctx_orig_yarn       = 131072\nprint_info: rope_yarn_log_mul     = 0.0000\nprint_info: rope_finetuned        = yes\nprint_info: model type            = 3B\nprint_info: model params          = 2.53 B\nprint_info: general.name          = Granite 3.3 2b Instruct\nprint_info: f_embedding_scale     = 12.000000\nprint_info: f_residual_scale      = 0.220000\nprint_info: f_attention_scale     = 0.015625\nprint_info: n_ff_shexp            = 0\nprint_info: vocab type            = BPE\nprint_info: n_vocab               = 49159\nprint_info: n_merges              = 48891\nprint_info: BOS token             = 0 '<|end_of_text|>'\nprint_info: EOS token             = 0 '<|end_of_text|>'\nprint_info: EOT token             = 0 '<|end_of_text|>'\nprint_info: UNK token             = 0 '<|end_of_text|>'\nprint_info: PAD token             = 0 '<|end_of_text|>'\nprint_info: LF token              = 203 '\u010a'\nprint_info: FIM PRE token         = 1 '<fim_prefix>'\nprint_info: FIM SUF token         = 3 '<fim_suffix>'\nprint_info: FIM MID token         = 2 '<fim_middle>'\nprint_info: FIM PAD token         = 4 '<fim_pad>'\nprint_info: FIM REP token         = 18 '<reponame>'\nprint_info: EOG token             = 0 '<|end_of_text|>'\nprint_info: EOG token             = 4 '<fim_pad>'\nprint_info: EOG token             = 18 '<reponame>'\nprint_info: max token length      = 512\nload_tensors: loading model tensors, this can take a while... (mmap = false, direct_io = false)\nggml_backend_cuda_get_available_uma_memory: failed to open /proc/meminfo\nggml_backend_cuda_device_get_memory: /proc/meminfo reading failed, using cudaMemGetInfo\nload_tensors: layer   0 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   1 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   2 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   3 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   4 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   5 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   6 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   7 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   8 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   9 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  10 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  11 assigned to devic","tail":"emory_seq_rm [58, end)\nslot init_sampler: id  3 | task 4 | init sampler, took 0.01 ms, tokens: text = 59, total = 59\nslot update_slots: id  3 | task 4 | prompt processing done, n_tokens = 59, batch.n_tokens = 1\nsrv  update_slots: decoding batch, n_tokens = 1\nset_adapters_lora: adapters = (nil)\nadapters_lora_are_same: adapters = (nil)\nset_embeddings: value = 0\nslot process_toke: id  3 | task 4 | n_decoded = 1, n_remaining = 2, next token:  8279 'Hello'\nsrv  update_slots: run slots completed\nque    start_loop: waiting for new tasks\nque    start_loop: processing new tasks\nque    start_loop: processing task, id = 5\nque    start_loop: update slots\nsrv  update_slots: posting NEXT_RESPONSE\nque          post: new task, id = 6, front = 0\nslot update_slots: id  3 | task 4 | slot decode token, n_ctx = 88832, n_tokens = 60, truncated = 0\nsrv  update_slots: decoding batch, n_tokens = 1\nset_adapters_lora: adapters = (nil)\nadapters_lora_are_same: adapters = (nil)\nset_embeddings: value = 0\nslot process_toke: id  3 | task 4 | n_decoded = 2, n_remaining = 1, next token:    19 '!'\nsrv  update_slots: run slots completed\nque    start_loop: waiting for new tasks\nque    start_loop: processing new tasks\nque    start_loop: processing task, id = 6\nque    start_loop: update slots\nsrv  update_slots: posting NEXT_RESPONSE\nque          post: new task, id = 7, front = 0\nslot update_slots: id  3 | task 4 | slot decode token, n_ctx = 88832, n_tokens = 61, truncated = 0\nsrv  update_slots: decoding batch, n_tokens = 1\nset_adapters_lora: adapters = (nil)\nadapters_lora_are_same: adapters = (nil)\nset_embeddings: value = 0\nslot process_toke: id  3 | task 4 | stopped by limit, n_decoded = 3, n_predict = 3\nslot process_toke: id  3 | task 4 | n_decoded = 3, n_remaining = 0, next token:  4971 ' How'\nslot print_timing: id  3 | task 4 | \nprompt eval time =      34.64 ms /     1 tokens (   34.64 ms per token,    28.87 tokens per second)\n       eval time =      69.09 ms /     3 tokens (   23.03 ms per token,    43.42 tokens per second)\n      total time =     103.73 ms /     4 tokens\nres          send: sending result for task id = 4\nres          send: task id = 4 pushed to result queue\nslot      release: id  3 | task 4 | stop processing: n_tokens = 61, truncated = 0\nslot        reset: id  3 | task 4 | \nsrv  update_slots: run slots completed\nque    start_loop: waiting for new tasks\nque    start_loop: processing new tasks\nque    start_loop: processing task, id = 7\nque    start_loop: update slots\nsrv  update_slots: all slots are idle\nque    start_loop: waiting for new tasks\nsrv  update_chat_: Parsing chat message: Hello! How\nParsing PEG input with format peg-native: <|start_of_role|>assistant<|end_of_role|>Hello! How\nParsed message: {\"role\":\"assistant\",\"content\":\"Hello! How\"}\nsrv          stop: all tasks already finished, no need to cancel\nres  remove_waiti: remove task 4 from waiting list. current waiting = 1 (before remove)\nsrv          stop: all tasks already finished, no need to cancel\nsrv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200\nsrv  log_server_r: request:  {\"model\":\"granite4:3b\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":3}\nsrv  log_server_r: response: {\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How\"}}],\"created\":1776970664,\"model\":\"ibm-granite/granite-3.3-2b-instruct-GGUF:Q4_K_M\",\"system_fingerprint\":\"b8770-82764d8\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":3,\"prompt_tokens\":59,\"total_tokens\":62,\"prompt_tokens_details\":{\"cached_tokens\":58}},\"id\":\"chatcmpl-VkfcvjVN4pPkkNE8oZ8iJ5N8dcw7cML3\",\"__verbose\":{\"index\":0,\"content\":\"Hello! How\",\"tokens\":[],\"id_slot\":3,\"stop\":true,\"model\":\"ibm-granite/granite-3.3-2b-instruct-GGUF:Q4_K_M\",\"tokens_predicted\":3,\"tokens_evaluated\":59,\"generation_settings\":{\"seed\":4294967295,\"temperature\":0.800000011920929,\"dynatemp_range\":0.0,\"dynatemp_exponent\":1.0,\"top_k\":40,\"top_p\":0.949999988079071,\"min_p\":0.05000000074505806,\"top_n_sigma\":-1.0,\"xtc_probability\":0.0,\"xtc_threshold\":0.10000000149011612,\"typical_p\":1.0,\"repeat_last_n\":64,\"repeat_penalty\":1.0,\"presence_penalty\":0.0,\"frequency_penalty\":0.0,\"dry_multiplier\":0.0,\"dry_base\":1.75,\"dry_allowed_length\":2,\"dry_penalty_last_n\":88832,\"dry_sequence_breakers\":[\"\\n\",\":\",\"\\\"\",\"*\"],\"mirostat\":0,\"mirostat_tau\":5.0,\"mirostat_eta\":0.10000000149011612,\"stop\":[],\"max_tokens\":3,\"n_predict\":3,\"n_keep\":0,\"n_discard\":0,\"ignore_eos\":false,\"stream\":false,\"logit_bias\":[],\"n_probs\":0,\"min_keep\":0,\"grammar\":\"\",\"grammar_lazy\":false,\"grammar_triggers\":[],\"preserved_tokens\":[],\"chat_format\":\"peg-native\",\"reasoning_format\":\"deepseek\",\"reasoning_in_content\":false,\"generation_prompt\":\"<|start_of_role|>assistant<|end_of_role|>\",\"samplers\":[\"penalties\",\"dry\",\"top_n_sigma\",\"top_k\",\"typ_p\",\"top_p\",\"min_p\",\"xtc\",\"temperature\"],\"speculative.n_max\":16,\"speculative.n_min\":0,\"speculative.p_min\":0.75,\"speculative.type\":\"none\",\"speculative.ngram_size_n\":1024,\"speculative.ngram_size_m\":1024,\"speculative.ngram_m_hits\":1024,\"timings_per_token\":false,\"post_sampling_probs\":false,\"backend_sampling\":false,\"lora\":[]},\"prompt\":\"<|start_of_role|>system<|end_of_role|> Knowledge Cutoff Date: April 2024.\\n Today's Date: April 23, 2026. You are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\\n<|start_of_role|>user<|end_of_role|>hi<|end_of_text|>\\n<|start_of_role|>assistant<|end_of_role|>\",\"has_new_line\":false,\"truncated\":false,\"stop_type\":\"limit\",\"stopping_word\":\"\",\"tokens_cached\":61,\"timings\":{\"cache_n\":58,\"prompt_n\":1,\"prompt_ms\":34.637,\"prompt_per_token_ms\":34.637,\"prompt_per_second\":28.870860640355687,\"predicted_n\":3,\"predicted_ms\":69.093,\"predicted_per_token_ms\":23.031000000000002,\"predicted_per_second\":43.41973861317355}},\"timings\":{\"cache_n\":58,\"prompt_n\":1,\"prompt_ms\":34.637,\"prompt_per_token_ms\":34.637,\"prompt_per_second\":28.870860640355687,\"predicted_n\":3,\"predicted_ms\":69.093,\"predicted_per_token_ms\":23.031000000000002,\"predicted_per_second\":43.41973861317355}}\n"},"timestamp":1776970668381}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H7,H8,H11,H12","location":"apu-debug.sh:llama-log","message":"gpu-markers","data":{"matches":"llama_model_load_from_file_impl: using device ROCm0 (AMD Radeon 680M) (0000:05:00.0) - 9884 MiB free\nload_tensors: loading model tensors, this can take a while... (mmap = false, direct_io = false)\nload_tensors: layer   0 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   1 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   2 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   3 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   4 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   5 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   6 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   7 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   8 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   9 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  10 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  11 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  12 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  13 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  14 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  15 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  16 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  17 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  18 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  19 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  20 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  21 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  22 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  23 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  24 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  25 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  26 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  27 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  28 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  29 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  30 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  31 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  32 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  33 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  34 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  35 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  36 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  37 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  38 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  39 assigned to device ROCm0, is_swa = 0\nload_tensors: layer  40 assigned to device ROCm0, is_swa = 0\nload_tensors: offloading output layer to GPU\nload_tensors: offloading 39 repeating layers to GPU\nload_tensors: offloaded 41/41 layers to GPU\nload_tensors:          CPU model buffer size =     0.00 MiB\nload_tensors:        ROCm0 model buffer size =     0.00 MiB\nllama_kv_cache: layer   0: dev = ROCm0\nllama_kv_cache: layer   1: dev = ROCm0\nllama_kv_cache: layer   2: dev = ROCm0\nllama_kv_cache: layer   3: dev = ROCm0\nllama_kv_cache: layer   4: dev = ROCm0\nllama_kv_cache: layer   5: dev = ROCm0\nllama_kv_cache: layer   6: dev = ROCm0\nllama_kv_cache: layer   7: dev = ROCm0\nllama_kv_cache: layer   8: dev = ROCm0\nllama_kv_cache: layer   9: dev = ROCm0\nllama_kv_cache: layer  10: dev = ROCm0\nllama_kv_cache: layer  11: dev = ROCm0\nllama_kv_cache: layer  12: dev = ROCm0\nllama_kv_cache: layer  13: dev = ROCm0\nllama_kv_cache: layer  14: dev = ROCm0\nllama_kv_cache: layer  15: dev = ROCm0\nllama_kv_cache: layer  16: dev = ROCm0\nllama_kv_cache: layer  17: dev = ROCm0\nllama_kv_cache: layer  18: dev = ROCm0\nllama_kv_cache: layer  19: dev = ROCm0\nllama_kv_cache: layer  20: dev = ROCm0\nllama_kv_cache: layer  21: dev = ROCm0\nllama_kv_cache: layer  22: dev = ROCm0\nllama_kv_cache: layer  23: dev = ROCm0\nllama_kv_cache: layer  24: dev = ROCm0\nllama_kv_cache: layer  25: dev = ROCm0\nllama_kv_cache: layer  26: dev = ROCm0\nllama_kv_cache: layer  27: dev = ROCm0\nllama_kv_cache: layer  28: dev = ROCm0\nllama_kv_cache: layer  29: dev = ROCm0\nllama_kv_cache: layer  30: dev = ROCm0\nllama_kv_cache: layer  31: dev = ROCm0\nllama_kv_cache: layer  32: dev = ROCm0\nllama_kv_cache: layer  33: dev = ROCm0\nllama_kv_cache: layer  34: dev = ROCm0\nllama_kv_cache: layer  35: dev = ROCm0\nllama_kv_cache: layer  36: dev = ROCm0\nllama_kv_cache: layer  37: dev = ROCm0\nllama_kv_cache: layer  38: dev = ROCm0\nllama_kv_cache: layer  39: dev = ROCm0\nllama_kv_cache:      ROCm0 KV buffer size =     0.00 MiB\nsched_reserve:      ROCm0 compute buffer size =   400.01 MiB\nllama_memory_breakdown_print: |   - ROCm0 (680M)       |  9888 = 9742 + (12112 =  1472 +   10240 +     400) + 17592186032450 |\nllama_model_load_from_file_impl: using device ROCm0 (AMD Radeon 680M) (0000:05:00.0) - 9742 MiB free\nload_tensors: loading model tensors, this can take a while... (mmap = false, direct_io = false)\nload_tensors: layer   0 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   1 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   2 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   3 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   4 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   5 assigned to device ROCm0, is_swa = 0\nload_tensors: layer   6 assigned to device ROCm0, is_swa = 0\n"},"timestamp":1776970668403}
++{"sessionId":"73dad3","runId":"run3","hypothesisId":"H7","location":"apu-debug.sh:perf","message":"model-timings","data":{"predicted_per_token_ms": 23.031000000000002, "prompt_per_token_ms": 34.637, "predicted_n": 3, "prompt_n": 1},"timestamp":1776970668426}
+diff --git a/apu-debug-report.md b/apu-debug-report.md
+new file mode 100644
+index 0000000..561f0e3
+--- /dev/null
++++ b/apu-debug-report.md
+@@ -0,0 +1,285 @@
++# APU / ROCm Debug Report
++
++## Overview
++
++This file records the full debugging session for the AMD APU / ROCm issues on `yifuwuqi`.
++
++Original symptoms:
++
++- The AMD APU was not showing up in `btop`
++- `llama-swap` / `llama-server` was not using the APU and behaved like CPU-only inference
++
++## Bugs Found
++
++### 1. `btop` was built without working ROCm support in the installed package set
++
++The default `btop` package in the active system was not exposing AMD GPU data.
++
++Final root cause:
++
++- `btop` needed to be installed with `rocmSupport = true`
++- Once rebuilt that way, the binary gained a `DT_RUNPATH` to `rocm-smi`, and `librocm_smi64.so` became loadable
++
++Final fix:
++
++- In `modules/packages.nix`, replaced `btop` with:
++
++```nix
++(btop.override { rocmSupport = true; })
++```
++
++### 2. `llama-swap` service sandbox could not see the actual DRM device nodes
++
++`llama-server` could see the APU when run directly as the user, but not when started inside the `systemd` service sandbox.
++
++Final root cause:
++
++- `DeviceAllow = [ "/dev/dri rw" ]` was not sufficient for ROCm inside the service
++- The service needed explicit access to the actual character devices:
++  - `/dev/dri/card0`
++  - `/dev/dri/renderD128`
++  - `/dev/kfd`
++
++Final fix:
++
++- In `modules/services/ai/llama-swap.nix`, changed:
++
++```nix
++DeviceAllow = [
++  "/dev/kfd rw"
++  "/dev/dri/card0 rw"
++  "/dev/dri/renderD128 rw"
++];
++```
++
++## What We Tested
++
++### Baseline checks
++
++- Verified the machine had the AMD GPU device nodes:
++  - `/dev/kfd`
++  - `/dev/dri/card0`
++  - `/dev/dri/renderD128`
++- Verified kernel-side AMDGPU presence through `/sys/class/drm`
++- Verified `llama-swap.service` was active
++- Verified current user groups included `video` and `render`
++
++### Direct `llama-server` tests
++
++- Ran the exact `llama-server` binary directly outside the service
++- Verified it could detect the APU directly:
++
++```text
++ggml_cuda_init: found 1 ROCm devices
++Device 0: AMD Radeon 680M
++Available devices:
++  ROCm0: AMD Radeon 680M
++```
++
++This proved ROCm itself and the built `llama-cpp` binary were fundamentally working.
++
++### Runtime GPU usage sampling
++
++We repeatedly sampled:
++
++- `/sys/class/drm/card0/device/mem_info_vram_used`
++- `/sys/class/drm/card0/device/mem_info_gtt_used`
++- `/sys/class/drm/card0/device/gpu_busy_percent`
++
++Before the service fix, inference showed effectively no GPU use:
++
++- VRAM nearly unchanged
++- GTT nearly unchanged
++- `gpu_busy_percent = 0`
++- Throughput matched CPU-only behavior
++
++After the service fix, inference showed large GPU memory usage:
++
++- `gtt_used` jumped to about `9.29 GiB`
++- `llama-server` logs showed full ROCm offload
++- Token latency dropped significantly
++
++### `btop` inspection
++
++We checked:
++
++- `ldd` output
++- binary strings for `librocm_smi64.so`
++- `readelf -d` for `RUNPATH`
++- direct `dlopen` behavior against `librocm_smi64.so`
++
++Important note:
++
++- An early check using `patchelf --print-rpath` was wrong because `patchelf` was not installed on the host
++- Later `readelf` checks confirmed the rebuilt `btop` binary had the correct `RUNPATH`
++
++Verified final state:
++
++- `RUNPATH` includes `rocm-smi`
++- `librocm_smi64.so` loads successfully
++- User confirmed the GPU now shows in `btop`
++
++### `llama-swap` instrumentation
++
++To get runtime evidence from inside the service, we added temporary debug instrumentation:
++
++- `--log-file /var/log/llama-swap-dbg2/server.log`
++- `--verbose`
++- `LogsDirectory = "llama-swap-dbg2"`
++- `LogsDirectoryMode = "0755"`
++- `UMask = "0022"`
++
++We also added:
++
++- `ExecStartPre` probe that runs:
++
++```text
++llama-server --list-devices
++```
++
++inside the exact service sandbox and writes the result to:
++
++```text
++/var/log/llama-swap-dbg2/list-devices.log
++```
++
++This was key to proving the service sandbox behaved differently from the user shell.
++
++### Transient `systemd-run` reproduction tests
++
++We used `systemd-run` to reproduce the sandbox behavior outside the main service.
++
++Findings:
++
++- Minimal transient unit as user `yi`:
++  - ROCm detection worked
++- Transient unit with `DeviceAllow='/dev/kfd rw'` and `DeviceAllow='/dev/dri rw'`:
++  - ROCm detection failed
++- Transient unit with:
++  - `DeviceAllow='/dev/kfd rw'`
++  - `DeviceAllow='/dev/dri/card0 rw'`
++  - `DeviceAllow='/dev/dri/renderD128 rw'`
++  - ROCm detection worked again
++
++This isolated the issue to the service's device cgroup permissions.
++
++## Hypotheses We Tested
++
++### Confirmed
++
++- `btop` needed ROCm-enabled packaging
++- `llama-swap` sandbox needed explicit DRM node access
++
++### Rejected
++
++- `HSA_OVERRIDE_GFX_VERSION=10.3.0` as the main cause
++  - It changed reported gfx version (`gfx1030` vs `gfx1035`) but was not the blocker
++- `-fit on` overriding `-ngl 99` as the main cause
++  - This looked plausible from logs, but even with `-fit off`, the service still stayed CPU-only until the device permissions were fixed
++- `/dev/kfd` Unix permissions as the main issue
++  - `/dev/kfd` was already world-readable/writable enough for the intended use
++- `AF_NETLINK` restriction as the main issue
++  - Allowing it did not fix ROCm detection
++- `DynamicUser` alone as the main issue
++  - The real blocker was the device cgroup rule shape, not just the user model
++
++## Final Runtime Evidence
++
++### Before the fix
++
++Inside the service sandbox probe:
++
++```text
++ggml_cuda_init: failed to initialize ROCm: no ROCm-capable device is detected
++Available devices:
++```
++
++Model loading inside the service:
++
++```text
++load_tensors: layer 0 assigned to device CPU
++...
++load_tensors: layer 40 assigned to device CPU
++```
++
++Performance looked CPU-only:
++
++- `predicted_per_token_ms` around `60-68 ms`
++
++### After the fix
++
++Inside the service sandbox probe:
++
++```text
++ggml_cuda_init: found 1 ROCm devices
++Available devices:
++  ROCm0: AMD Radeon 680M
++```
++
++Model loading inside the service:
++
++```text
++llama_model_load_from_file_impl: using device ROCm0 (AMD Radeon 680M)
++load_tensors: layer 0 assigned to device ROCm0
++...
++load_tensors: offloaded 41/41 layers to GPU
++```
++
++Additional GPU evidence:
++
++- `gtt_used` rose to about `9.29 GiB`
++- token generation dropped to about `23.03 ms/token`
++
++This confirmed real APU usage, not just device detection.
++
++## Files Changed
++
++### `modules/packages.nix`
++
++- Replaced `btop` with `(btop.override { rocmSupport = true; })`
++- Added `jq`
++
++### `modules/services/ai/llama-swap.nix`
++
++- Kept ROCm-enabled `llama-cpp`
++- Added debug logging/instrumentation for the session
++- Added `ExecStartPre` sandbox probe
++- Changed `DeviceAllow` from the broad `/dev/dri rw` to explicit DRM nodes
++
++### `hosts/yifuwuqi/services.nix`
++
++- Final state keeps:
++
++```nix
++services.llama-swap-amdgpu = {
++  enable = true;
++  rocmTargets = [ "gfx1035" ];
++  rocmOverrideGfx = "10.3.0";
++};
++```
++
++## Current Status
++
++- `btop` now shows the AMD GPU
++- `llama-swap` now sees `ROCm0` inside the service sandbox
++- `llama-server` now offloads all model layers to the GPU
++
++## Temporary Debug Instrumentation Still Present
++
++The following debug changes are still present and can be removed later once no longer needed:
++
++- `--log-file /var/log/llama-swap-dbg2/server.log`
++- `--verbose`
++- `LogsDirectory = "llama-swap-dbg2"`
++- `LogsDirectoryMode = "0755"`
++- `UMask = "0022"`
++- `ExecStartPre` sandbox probe writing `list-devices.log`
++
++## Short Final Summary
++
++There were two separate problems:
++
++1. `btop` was not installed with ROCm support
++2. `llama-swap`'s `systemd` device cgroup allowed `/dev/dri` as a path, but not the actual DRM character devices ROCm needs
++
++Once `btop` was rebuilt with `rocmSupport = true` and `llama-swap` was granted explicit access to `/dev/dri/card0` and `/dev/dri/renderD128`, both the monitor and `llama-server` started using the AMD APU correctly.
+diff --git a/flake.lock b/flake.lock
+index a66a698..a352f9b 100755
+--- a/flake.lock
++++ b/flake.lock
+@@ -457,11 +457,11 @@
+         ]
+       },
+       "locked": {
+-        "lastModified": 1776692876,
+-        "narHash": "sha256-7Q05rUgwbkJnjxIJyi8bHUG+XnyZqLxFJz7c8RncpeU=",
++        "lastModified": 1776910211,
++        "narHash": "sha256-0ku3gW8bZ9TTpEU2fQw86oU6ZLT2vF6pacF+cLaf7VY=",
+         "owner": "nix-community",
+         "repo": "NixOS-WSL",
+-        "rev": "51b302c28dbf904a5c341be005eebe0779cf4f16",
++        "rev": "4e6cad241baa0115a7aae8c55b04c166da4997c9",
+         "type": "github"
+       },
+       "original": {
+@@ -504,11 +504,11 @@
+     },
+     "nixpkgs-small": {
+       "locked": {
+-        "lastModified": 1776830795,
+-        "narHash": "sha256-Gg5hJkg5jCRpgqnWrMRsv91BaPSD4i30VIz2VO2ojkI=",
++        "lastModified": 1776913179,
++        "narHash": "sha256-Iwesd5EElZRa6DAV5tay8X2g2BFz9pctl9H2v8Uri+s=",
+         "owner": "NixOS",
+         "repo": "nixpkgs",
+-        "rev": "f0992d330153d25ef88978c0cbecdb9c707b6f53",
++        "rev": "714c76b9f9abc1b58fc46721211f558cff36a6eb",
+         "type": "github"
+       },
+       "original": {
+@@ -686,11 +686,11 @@
+         "tinted-zed": "tinted-zed"
+       },
+       "locked": {
+-        "lastModified": 1775935110,
+-        "narHash": "sha256-twTHKUFXjNNsaAvX0KoaIClt+923jXDRbfCd9PC/f0o=",
++        "lastModified": 1776894428,
++        "narHash": "sha256-wuT915MyCtMTfLj+uo9y8wtCwkEgJXiXvcbSleFrlN0=",
+         "owner": "nix-community",
+         "repo": "stylix",
+-        "rev": "14f248ad1a7668e7858c6d9163608c208b7daf02",
++        "rev": "f34be27ce83efaa1c85ad1e5b1f8b6dea65b147d",
+         "type": "github"
+       },
+       "original": {
+diff --git a/hosts/yifuwuqi/services.nix b/hosts/yifuwuqi/services.nix
+index 58b0266..148e4b4 100755
+--- a/hosts/yifuwuqi/services.nix
++++ b/hosts/yifuwuqi/services.nix
+@@ -13,7 +13,7 @@
+     ../../modules/services/adguardhome.nix
+     ../../modules/services/cloudflared.nix
+     # ../../modules/services/zerotier.nix
+-    ../../modules/services/ollama-amdgpu.nix
++    ../../modules/services/ai/llama-swap.nix
+     # ../../modules/services/playit-agent.nix
+     # ../../modules/services/localtonet.nix
+     ../../modules/services/tailscale.nix
+@@ -41,7 +41,7 @@
+     useRoutingFeatures = "server";
+   };
+ 
+-  programs.nix-ld.enable = true;
++
+ 
+   security.pam = {
+     services.sshd.googleAuthenticator.enable = true;
+@@ -69,14 +69,12 @@
+     };
+   };
+ 
+-  services.ollama-amdgpu = {
++  services.llama-swap-amdgpu = {
+     enable = true;
+     rocmTargets = [ "gfx1035" ];
+     rocmOverrideGfx = "10.3.0";
+   };
+ 
+-  services.ollama.loadModels = [ "qwen2.5:7b" ];
+-
+   services.fwupd.enable = true;
+ 
+   services.opencode.enable = true;
+diff --git a/hosts/yitaishi/services.nix b/hosts/yitaishi/services.nix
+index e5e5b2e..94f0afd 100644
+--- a/hosts/yitaishi/services.nix
++++ b/hosts/yitaishi/services.nix
+@@ -5,12 +5,5 @@
+   imports = [
+     ../../modules/services/tailscale.nix
+     # ../../modules/services/zerotier.nix
+-    ../../modules/services/ollama-amdgpu.nix
+   ];
+-
+-  services.ollama-amdgpu = {
+-    enable = true;
+-    rocmTargets = [ "gfx1100" ];
+-    rocmOverrideGfx = "11.0.0";
+-  };
+ }
+diff --git a/modules/common.nix b/modules/common.nix
+index 37ac2d7..8d84df2 100644
+--- a/modules/common.nix
++++ b/modules/common.nix
+@@ -3,10 +3,10 @@
+ {
+   imports = [
+     ./lix.nix
++    ./nix-ld.nix
+   ];
+ 
+   _module.args.allAddresses = import ./addresses.nix;
+   environment.defaultPackages = lib.mkForce [ ];
+   nixpkgs.config.allowUnfree = true;
+-  programs.nix-ld.enable = true;
+ }
+diff --git a/modules/locale.nix b/modules/locale.nix
+index 3a96e56..a6c3eae 100755
+--- a/modules/locale.nix
++++ b/modules/locale.nix
+@@ -5,6 +5,7 @@ _:
+ {
+   # Time zone
+   time.timeZone = "America/Sao_Paulo";
++  environment.sessionVariables.TZ = "America/Sao_Paulo";
+ 
+   i18n = {
+     defaultLocale = "pt_BR.UTF-8";
+diff --git a/modules/networking/gateway-failover.nix b/modules/networking/gateway-failover.nix
+index cd50fe9..55c7fb4 100644
+--- a/modules/networking/gateway-failover.nix
++++ b/modules/networking/gateway-failover.nix
+@@ -5,7 +5,10 @@ let
+   inherit (addresses.network.lan.ipv4) gateway host;
+ 
+   metric = 100;
+-  pingTarget = "8.8.8.8";
++  # Less-famous anycast IP (Level3/CenturyLink). Not in the AdGuardHome
++  # upstream list, so pinning it to eno1 (see the tracker route below) does
++  # not affect any other service on this host.
++  pingTarget = "4.2.2.2";
+   pingTimeout = 2;
+   pingDeadline = 5;
+ 
+@@ -35,6 +38,21 @@ let
+   };
+ in
+ {
++  # Tracker route for the WAN check. Without it, `ping -I <interface>
++  # <pingTarget>` has no on-link or via route through the interface (the
++  # metric-100 default is only added by notify_master *after* the check
++  # passes), so the kernel ARPs the target on the LAN, the ping fails, and
++  # keepalived never leaves FAULT - the box gets stuck on the fallback
++  # uplink. Pinning <pingTarget>/32 to <gateway> dev <interface> breaks the
++  # chicken-and-egg: the probe always has a path through the primary uplink,
++  # so the check reflects real WAN reachability.
++  systemd.network.networks."30-eno1".routes = [
++    {
++      Destination = "${pingTarget}/32";
++      Gateway = gateway;
++    }
++  ];
++
+   services.keepalived = {
+     enable = true;
+     enableScriptSecurity = true;
+diff --git a/modules/networking/interfaces/eno1.nix b/modules/networking/interfaces/eno1.nix
+index cbfb919..b552de8 100644
+--- a/modules/networking/interfaces/eno1.nix
++++ b/modules/networking/interfaces/eno1.nix
+@@ -29,6 +29,11 @@
+         # The metric-100 default route is owned exclusively by keepalived
+         # (see modules/networking/gateway-failover.nix). networkd must not
+         # install it - that would race with keepalived's notify script.
++        #
++        # gateway-failover.nix also merges a /32 tracker route here for the
++        # WAN-check probe target (via the LAN gateway) so the keepalived
++        # check has a guaranteed path out eno1 regardless of the default
++        # route state. That's why `ip route` shows a host route on eno1.
+ 
+         linkConfig = {
+           MTUBytes = 1492;
+diff --git a/modules/nix-ld.nix b/modules/nix-ld.nix
+new file mode 100644
+index 0000000..2f9dad5
+--- /dev/null
++++ b/modules/nix-ld.nix
+@@ -0,0 +1,37 @@
++{ pkgs, ... }:
++
++{
++  programs.nix-ld = {
++    enable = true;
++    libraries = with pkgs; [
++      stdenv.cc.cc
++      zlib
++      alsa-lib
++      glib
++      nss
++      nspr
++      atk
++      at-spi2-atk
++      at-spi2-core
++      libdrm
++      mesa
++      xorg.libX11
++      xorg.libXcomposite
++      xorg.libXdamage
++      xorg.libXext
++      xorg.libXfixes
++      xorg.libXrandr
++      xorg.libxcb
++      xorg.libxshmfence
++      libGL
++      libgbm
++      expat
++      pango
++      cairo
++      cups
++      dbus.lib
++      udev
++      libxkbcommon
++    ];
++  };
++}
+diff --git a/modules/packages.nix b/modules/packages.nix
+index 63accfc..bc97a89 100755
+--- a/modules/packages.nix
++++ b/modules/packages.nix
+@@ -17,7 +17,10 @@ in
+     zerotierone
+ 
+     # System utilities
+-    btop
++    # rocmSupport=true patches in the rpath so btop dlopens librocm_smi64
++    # and shows the AMD iGPU. Without it, btop builds CPU-only.
++    (btop.override { rocmSupport = true; })
++    amdgpu_top
+     curl
+     stow
+     tmux
+@@ -51,6 +54,7 @@ in
+     ethtool
+     iftop
+     iperf3
++    jq
+     kubectl
+     ncdu
+     nethogs
+diff --git a/modules/services/ai/llama-swap.nix b/modules/services/ai/llama-swap.nix
+new file mode 100644
+index 0000000..4916915
+--- /dev/null
++++ b/modules/services/ai/llama-swap.nix
+@@ -0,0 +1,156 @@
++{
++  config,
++  lib,
++  pkgs,
++  inputs,
++  ...
++}:
++
++let
++  cfg = config.services.llama-swap-amdgpu;
++
++  unstable = import ../../nixpkgs-unstable.nix { inherit inputs pkgs; };
++
++  # Per-package override so the unstable helper stays generic; avoids the
++  # global `nixpkgs.config.rocmSupport = true` that ollama-amdgpu had to set.
++  llama-cpp = (unstable.llama-cpp.override {
++    rocmSupport = true;
++    rocmGpuTargets = cfg.rocmTargets;
++  }).overrideAttrs (old: {
++    cmakeFlags = (old.cmakeFlags or []) ++ [
++      "-DGGML_HIP_UMA=ON"  # Required for APU/iGPU unified memory
++    ];
++  });
++  llama-server = lib.getExe' llama-cpp "llama-server";
++
++  ai = import ./models.nix;
++
++  # `${PORT}` is a llama-swap placeholder substituted at request time, not a
++  # Nix interpolation -- escape the `$` so it survives into the YAML config.
++  # #region agent log
++  # DEBUG: --log-file + --verbose capture HIP/ROCm init output for the
++  # spawned llama-server, since llama-swap eats stdout/stderr from children.
++  # Sanitize model name for filename (replace ':' since it breaks some FS ops).
++  # #endregion
++  buildCmd =
++    m:
++    lib.concatStringsSep " " (
++      [
++        llama-server
++        "--port"
++        "\${PORT}"
++        "-hf"
++        "${m.llamaCpp.hfRepo}:${m.llamaCpp.quant}"
++        "-ngl"
++        "99"
++        "-fa"
++        "on"
++        "--no-webui"
++        # #region agent log
++        "--log-file"
++        "/var/log/llama-swap-dbg2/server.log"
++        "--verbose"
++        # #endregion
++      ]
++      ++ lib.optional (m.tools or false) "--jinja"
++      ++ lib.optionals (m.reasoning or false) [
++        "--reasoning-format"
++        "deepseek"
++      ]
++      ++ lib.optionals ((m.contextLength or 0) > 0) [
++        "-c"
++        (toString m.contextLength)
++      ]
++    );
++
++  swapModels = lib.mapAttrs (_n: m: {
++    cmd = buildCmd m;
++    ttl = m.ttl or 600;
++  }) ai.local.models;
++in
++{
++  options.services.llama-swap-amdgpu = {
++    enable = lib.mkEnableOption "llama-swap with ROCm llama.cpp backend";
++
++    rocmTargets = lib.mkOption {
++      type = lib.types.listOf lib.types.str;
++      default = [ ];
++      description = "ROCm GPU targets to compile llama.cpp for (e.g. [ \"gfx1035\" ]).";
++    };
++
++    rocmOverrideGfx = lib.mkOption {
++      type = lib.types.nullOr lib.types.str;
++      default = null;
++      description = "HSA_OVERRIDE_GFX_VERSION reported to the ROCm runtime.";
++    };
++
++    port = lib.mkOption {
++      type = lib.types.port;
++      default = 11434;
++      description = "Listen port for llama-swap (defaults to Ollama's port for drop-in API compat).";
++    };
++  };
++
++  config = lib.mkIf cfg.enable {
++    hardware.graphics = {
++      enable = true;
++      enable32Bit = true;
++    };
++
++    hardware.amdgpu.opencl.enable = true;
++
++    services.llama-swap = {
++      enable = true;
++      package = unstable.llama-swap;
++      inherit (cfg) port;
++      settings = {
++        healthCheckTimeout = 60;
++        models = swapModels;
++      };
++    };
++
++    # Persistent HuggingFace cache + GPU access for the spawned llama-server
++    # children. SupplementaryGroups gives the DynamicUser access to /dev/dri
++    # and /dev/kfd; LLAMA_CACHE pins downloads under CacheDirectory so they
++    # survive reboots.
++    #
++    # ROCm sandboxing overrides:
++    #   MemoryDenyWriteExecute → HIP JIT-compiles GPU kernels (needs W|X pages)
++    #   PrivateUsers           → must see real UIDs for /dev/kfd group checks
++    #   PrivateDevices         → must access /dev/kfd + /dev/dri/renderD128
++    systemd.services.llama-swap.serviceConfig = {
++      CacheDirectory = "llama-swap";
++      # #region agent log
++      LogsDirectory = "llama-swap-dbg2";
++      LogsDirectoryMode = "0755";
++      UMask = "0022";
++      # Probe what GPU enumeration the SAME sandbox sees at startup.
++      ExecStartPre = [
++        "${pkgs.bash}/bin/bash -c '${llama-server} --list-devices > /var/log/llama-swap-dbg2/list-devices.log 2>&1 || true'"
++      ];
++      # #endregion
++      SupplementaryGroups = [
++        "video"
++        "render"
++      ];
++      # Required for ROCm/HIP GPU access on the iGPU
++      MemoryDenyWriteExecute = lib.mkForce false;
++      PrivateUsers = lib.mkForce false;
++      PrivateDevices = lib.mkForce false;
++      SystemCallFilter = lib.mkForce [];
++      DeviceAllow = [
++        "/dev/kfd rw"
++        # systemd's device cgroup rules do not recursively grant access to
++        # child character devices when only the parent directory is allowed.
++        # ROCm needs the actual DRM nodes, otherwise `--list-devices` inside
++        # the sandbox reports "no ROCm-capable device is detected".
++        "/dev/dri/card0 rw"
++        "/dev/dri/renderD128 rw"
++      ];
++      Environment = [
++        "LLAMA_CACHE=/var/cache/llama-swap"
++      ]
++      ++ lib.optional (cfg.rocmOverrideGfx != null) "HSA_OVERRIDE_GFX_VERSION=${cfg.rocmOverrideGfx}";
++    };
++  };
++}
+diff --git a/modules/services/mcp-shared.nix b/modules/services/ai/mcp.nix
+similarity index 76%
+rename from modules/services/mcp-shared.nix
+rename to modules/services/ai/mcp.nix
+index 1dd5bbf..5fc2f5e 100644
+--- a/modules/services/mcp-shared.nix
++++ b/modules/services/ai/mcp.nix
+@@ -34,4 +34,18 @@ in
+       };
+     };
+   };
++
++  puppeteer = {
++    opencode = {
++      puppeteer = {
++        type = "local";
++        command = [
++          "npx"
++          "-y"
++          "@modelcontextprotocol/server-puppeteer"
++        ];
++        enabled = true;
++      };
++    };
++  };
+ }
+diff --git a/modules/services/ai/models.nix b/modules/services/ai/models.nix
+new file mode 100644
+index 0000000..a48cedf
+--- /dev/null
++++ b/modules/services/ai/models.nix
+@@ -0,0 +1,132 @@
++# Provider-agnostic model registry. Each entry declares capabilities
++# (`tools`, `reasoning`, `contextLength`) and a llama.cpp source
++# (`llamaCpp.hfRepo` + `quant`) that llama-swap pulls from HuggingFace on
++# first request. All consumers derive their own schema from this single map.
++#
++# Imported as plain data (no module args) so it works from both NixOS modules
++# and home-manager modules.
++#
++# Consumed by:
++#   - modules/services/ai/llama-swap.nix -> per-model llama-server cmd
++#   - modules/services/librechat.nix     -> endpoints.custom[Local].models.default
++#   - users/programs/opencode.nix        -> provider.local.models
++let
++  contextLength = 32768;
++
++  models = {
++    "qwen3:8b" = {
++      tools = true;
++      reasoning = true;
++      inherit contextLength;
++      llamaCpp = {
++        hfRepo = "Qwen/Qwen3-8B-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "qwen3:4b" = {
++      tools = true;
++      reasoning = true;
++      inherit contextLength;
++      llamaCpp = {
++        hfRepo = "Qwen/Qwen3-4B-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "qwen2.5:7b" = {
++      tools = true;
++      llamaCpp = {
++        hfRepo = "Qwen/Qwen2.5-7B-Instruct-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "qwen2.5-coder:7b" = {
++      tools = true;
++      inherit contextLength;
++      llamaCpp = {
++        hfRepo = "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "gpt-oss:20b" = {
++      tools = true;
++      reasoning = true;
++      inherit contextLength;
++      llamaCpp = {
++        # gpt-oss ships natively in mxfp4; F16 is the standard llama.cpp build.
++        hfRepo = "ggml-org/gpt-oss-20b-GGUF";
++        quant = "F16";
++      };
++    };
++
++    "qwen3-coder:30b" = {
++      tools = true;
++      inherit contextLength;
++      llamaCpp = {
++        # Qwen3-Coder-30B-A3B-Instruct: MoE 30B total / 3.3B active,
++        # explicitly trained for long-horizon agentic tool use. Q3_K_M
++        # at ~14.8 GB is the sweet spot for this host's 19 GiB UMA;
++        # active-params count keeps token throughput at 8B-class
++        # speeds despite the 30B nameplate. unsloth's repo because
++        # their Dynamic 2.0 quants outperform stock at the same file
++        # size and llama.cpp pulls them via -hf cleanly.
++        hfRepo = "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF";
++        quant = "Q3_K_M";
++      };
++    };
++
++    "deepseek-r1-tools:8b" = {
++      tools = true;
++      reasoning = true;
++      inherit contextLength;
++      llamaCpp = {
++        # bartowski's reupload patches the chat template so tool calls work,
++        # which the upstream deepseek-r1 distill template does not.
++        hfRepo = "bartowski/DeepSeek-R1-Distill-Llama-8B-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "granite4:3b" = {
++      tools = true;
++      llamaCpp = {
++        hfRepo = "ibm-granite/granite-3.3-2b-instruct-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++
++    "gemma3:4b" = {
++      tools = true;
++      reasoning = true;
++      inherit contextLength;
++      llamaCpp = {
++        hfRepo = "ggml-org/gemma-3-4b-it-GGUF";
++        quant = "Q4_K_M";
++      };
++    };
++  };
++
++  optionalAttrs = cond: attrs: if cond then attrs else { };
++
++  toolCapable = builtins.filter (n: models.${n}.tools or false) (builtins.attrNames models);
++in
++{
++  local = {
++    inherit models;
++
++    librechatDefaults = toolCapable;
++
++    opencodeModels = builtins.mapAttrs (
++      n: m:
++      {
++        name = n;
++      }
++      // optionalAttrs (m.tools or false) { tools = true; }
++      // optionalAttrs (m.reasoning or false) { reasoning = true; }
++      // optionalAttrs (m ? contextLength) { contextWindow = m.contextLength; }
++    ) models;
++  };
++}
+diff --git a/modules/services/librechat.nix b/modules/services/librechat.nix
+index 90a1bf2..68435a3 100644
+--- a/modules/services/librechat.nix
++++ b/modules/services/librechat.nix
+@@ -6,7 +6,9 @@
+ #   default `pkgs.librechat` resolves fine).
+ # - Local MongoDB enabled via `services.librechat.enableLocalDB = true`,
+ #   which the upstream module wires to `services.mongodb`.
+-# - DeepSeek + Ollama exposed as custom OpenAI-compatible endpoints.
++# - DeepSeek (cloud) + Local (llama-swap on 127.0.0.1:11434, fed by
++#   `services.llama-swap-amdgpu`) exposed as custom OpenAI-compatible
++#   endpoints. The local endpoint reuses Ollama's port for drop-in compat.
+ # - Native SearXNG web search hits the local SearXNG on 127.0.0.1:8888,
+ #   bypassing the public htpasswd-protected vhost (SearXNG itself binds
+ #   to loopback only).
+@@ -28,7 +30,8 @@
+ let
+   secretDir = "/var/lib/librechat-secret";
+   secretEnv = "${secretDir}/env";
+-  sharedMcp = import ./mcp-shared.nix;
++  sharedMcp = import ./ai/mcp.nix;
++  ai = import ./ai/models.nix;
+ in
+ {
+   imports = [
+@@ -105,16 +108,16 @@ in
+           modelDisplayLabel = "DeepSeek";
+         }
+         {
+-          name = "Ollama";
+-          apiKey = "ollama";
++          name = "Local";
++          apiKey = "none";
+           baseURL = "http://127.0.0.1:11434/v1/";
+           models = {
+-            default = [ "qwen2.5:7b" ];
++            default = ai.local.librechatDefaults;
+             fetch = true;
+           };
+           titleConvo = true;
+           titleModel = "current_model";
+-          modelDisplayLabel = "Ollama";
++          modelDisplayLabel = "Local";
+         }
+       ];
+ 
+diff --git a/modules/services/mcp-searxng.nix b/modules/services/mcp-searxng.nix
+index a6bbcc7..f2fdd0d 100644
+--- a/modules/services/mcp-searxng.nix
++++ b/modules/services/mcp-searxng.nix
+@@ -10,7 +10,7 @@
+ { addresses, ... }:
+ 
+ let
+-  sharedMcp = import ./mcp-shared.nix;
++  sharedMcp = import ./ai/mcp.nix;
+ in
+ 
+ {
+diff --git a/modules/services/ollama-amdgpu.nix b/modules/services/ollama-amdgpu.nix
+deleted file mode 100644
+index c03e6c9..0000000
+--- a/modules/services/ollama-amdgpu.nix
++++ /dev/null
+@@ -1,53 +0,0 @@
+-{
+-  config,
+-  lib,
+-  pkgs,
+-  ...
+-}:
+-
+-let
+-  cfg = config.services.ollama-amdgpu;
+-in
+-{
+-  options.services.ollama-amdgpu = {
+-    enable = lib.mkEnableOption "Ollama with AMD GPU support";
+-
+-    rocmTargets = lib.mkOption {
+-      type = lib.types.listOf lib.types.str;
+-      default = [ ];
+-      description = "List of ROCm targets to compile for (e.g. [ \"gfx1100\" ]).";
+-    };
+-
+-    rocmOverrideGfx = lib.mkOption {
+-      type = lib.types.nullOr lib.types.str;
+-      default = null;
+-      description = "HSA_OVERRIDE_GFX_VERSION for Ollama ROCm.";
+-    };
+-  };
+-
+-  config = lib.mkIf cfg.enable {
+-    nixpkgs.config = {
+-      cudaSupport = false;
+-      rocmSupport = true;
+-      inherit (cfg) rocmTargets;
+-    };
+-
+-    hardware.graphics = {
+-      enable = true;
+-      enable32Bit = true;
+-    };
+-
+-    hardware.amdgpu = {
+-      opencl.enable = true;
+-    };
+-
+-    services.ollama = {
+-      enable = true;
+-      package = pkgs.ollama-rocm;
+-      rocmOverrideGfx = lib.mkIf (cfg.rocmOverrideGfx != null) cfg.rocmOverrideGfx;
+-      environmentVariables = {
+-        HSA_OVERRIDE_GFX_VERSION = cfg.rocmOverrideGfx;
+-      };
+-    };
+-  };
+-}
+diff --git a/modules/services/searxng.nix b/modules/services/searxng.nix
+index ba27101..750cea8 100644
+--- a/modules/services/searxng.nix
++++ b/modules/services/searxng.nix
+@@ -89,19 +89,52 @@ in
+       };
+ 
+       outgoing = {
+-        request_timeout = 5.0;
+-        max_request_timeout = 15.0;
++        # Bumped from 5/15 so slower survivors (Bing, Qwant, Mojeek) get a
++        # chance to respond when faster engines (Brave) hit a 429 burst.
++        request_timeout = 6.0;
++        max_request_timeout = 20.0;
+         pool_connections = 100;
+         pool_maxsize = 15;
+         enable_http2 = true;
+       };
+ 
++      # Engine pool: drop the three engines that consistently fail from this
++      # IP (DDG/Startpage crash, Google denies SearXNG fetchers) so they stop
++      # burning the timeout budget, and add Mojeek (own crawl, no Big Tech
++      # rate-limiting) so a Brave 429 doesn't collapse the whole result set.
++      # Mullvad Leta is intentionally NOT enabled: its upstream engine
++      # requires SearXNG to run behind a Mullvad VPN connection, which we do
++      # not.
++      engines = [
++        {
++          name = "duckduckgo";
++          disabled = true;
++        }
++        {
++          name = "google";
++          disabled = true;
++        }
++        {
++          name = "startpage";
++          disabled = true;
++        }
++        {
++          name = "mojeek";
++          disabled = false;
++          shortcut = "mjk";
++        }
++      ];
++
+       enabled_plugins = [
+         "Basic Calculator"
+         "Hash plugin"
+         "Open Access DOI rewrite"
+         "Unit converter plugin"
+-        "Tracker URL remover"
++        # "Tracker URL remover" disabled - upstream issue searxng/searxng#4951:
++        # the per-result SQLite cache at /tmp/sxng_cache_DATA_CACHE.db locks
++        # itself readonly under our hardened systemd unit and spams every
++        # query with sqlite3.OperationalError. Search results going to MCP
++        # clients don't need utm_* stripping anyway.
+       ];
+     };
+   };
+diff --git a/users/programs/gnome-dconf.nix b/users/programs/gnome-dconf.nix
+index 4332099..ecd8643 100644
+--- a/users/programs/gnome-dconf.nix
++++ b/users/programs/gnome-dconf.nix
+@@ -36,6 +36,7 @@
+       };
+ 
+       "org/gnome/mutter" = {
++        workspaces-only-on-primary = false;
+         center-new-windows = true;
+         experimental-features = [
+           "scale-monitor-framebuffer"
+diff --git a/users/programs/opencode-rules.md b/users/programs/opencode-rules.md
+new file mode 100644
+index 0000000..f910ee2
+--- /dev/null
++++ b/users/programs/opencode-rules.md
+@@ -0,0 +1,205 @@
++# Web search workflow — READ FIRST
++
++When a task needs current web information, you must use REAL tool
++calls. Printed tool syntax is not a tool call.
++
++## Invalid tool behavior — NEVER DO THIS
++
++The following are failures:
++
++- Saying you will use a tool and then printing `tool_name { ... }`
++  in plain text.
++- Putting tool calls in JSON, code blocks, markdown, or prose.
++- Claiming article/page text without a real `puppeteer_evaluate`
++  result.
++- Stopping after `searxng_searxng_web_search` and replying with
++  links, sources, or summaries.
++- Falling back to `searxng_web_url_read` for page reading. That tool
++  is deprecated for this workflow and must not be used as a backup.
++- Pretending success after a tool error.
++
++A tool counts as USED only when the runtime actually executes it and
++returns a tool result or a tool error. A tool error is still a real
++tool call. Printed syntax is not.
++
++## Known weak-model fast exit
++
++If you are running on `granite4:3b`, `qwen2.5:7b`,
++`qwen2.5-coder:7b`, or `deepseek-r1-tools:8b` and the task needs web
++search or browser reading, do not attempt the workflow unless you can
++emit a REAL tool call immediately. Prefer this response:
++
++    I can't reliably execute the required MCP/browser tools with this model.
++    Please switch to `qwen3-coder:30b`, `gpt-oss:20b`, `qwen3:8b`, or
++    the cloud `deepseek/deepseek-chat` default.
++
++## REQUIRED execution policy (DIRECT BROWSER)
++
++IF YOU CALL `searxng_searxng_web_search`, YOUR VERY NEXT ACTION
++MUST BE AN ACTUAL `puppeteer_navigate` TOOL CALL. STOPPING AFTER A
++SEARCH IS A BUG. Search results are only titles + URLs; the page
++content is what answers the question.
++
++Step 1 (search):
++
++    For current events or latest headlines, include `!news` in the query.
++    Example:
++    searxng_searxng_web_search { "query": "!news latest news today" }
++
++Step 2 (read — MANDATORY before any text reply):
++
++    You MUST use your local Puppeteer browser to read pages. This is the only way to reliably bypass anti-bot screens and regional blocks.
++
++    1. Call `puppeteer_navigate { "url": "<top result url>" }`
++    2. Call `puppeteer_evaluate { "script": "return document.body.innerText;" }`
++
++Repeat step 2 for the top 1-3 most relevant URLs. Only then write
++your answer, citing the URLs you actually read.
++
++No text reply is allowed:
++
++- between search and the first `puppeteer_navigate`
++- between `puppeteer_navigate` and `puppeteer_evaluate`
++- before at least one page has been read
++
++If you cannot produce a REAL tool call, do not roleplay one. Say
++so plainly and ask the user to switch to a stronger model instead of
++fabricating results.
++
++If `puppeteer_navigate` or `puppeteer_evaluate` fails, stop and say
++the browser tool failed. Do NOT fall back to `searxng_web_url_read`,
++search-result snippets, memory, or guesses.
++
++Recommended fail-fast wording:
++
++    I can't reliably execute the required MCP/browser tools with this model.
++    Please switch to `qwen3-coder:30b`, `gpt-oss:20b`, `qwen3:8b`, or
++    the cloud `deepseek/deepseek-chat` default.
++
++Below, lines beginning with `Action:` mean a REAL tool call executed
++by the runtime, not printed text.
++
++### Failure example 1 — printed tool call
++
++    User: "today's news"
++    You:  "I'll use searxng_searxng_web_search first."
++    You:  searxng_searxng_web_search { "query": "latest news" }
++    You:  "CNN says ..."
++
++Wrong. That is narration plus printed syntax, not a tool event.
++
++### Failure example 2 — stopping after search
++
++    User: "today's news"
++    Action: searxng_searxng_web_search { "query": "!news latest news today" }
++    Tool: [{"url":"https://cnn.com",...}, {"url":"https://bbc.com",...}]
++    You:  "Here are some sources: CNN, BBC, ..."
++
++Wrong. That stops at step 1. The user asked what the news IS, not
++which sites exist.
++
++### Correct execution
++
++    User: "today's news"
++    Action: searxng_searxng_web_search { "query": "!news latest news today" }
++    Tool: [{"url":"https://cnn.com/article",...}, {"url":"https://bbc.com/news/...",...}]
++    Action: puppeteer_navigate { "url": "https://cnn.com/article" }
++    Tool: <navigation result>
++    Action: puppeteer_evaluate { "script": "return document.body.innerText;" }
++    Tool: "Today's top stories are..."
++    You:  "Today's top stories are: ... (cnn.com/article)"
++
++### Correct handling of a real tool failure
++
++    User: "today's news"
++    Action: searxng_searxng_web_search { "query": "!news latest news today" }
++    Tool: [{"url":"https://cnn.com/article",...}]
++    Action: puppeteer_navigate { "url": "https://cnn.com/article" }
++    Tool error: "Failed to launch the browser process!"
++    You:  "The browser tool really ran, but it failed locally. I need the browser runtime fixed or a stronger working browser configuration before I can read the page."
++
++Do not continue with `searxng_web_url_read` after a Puppeteer error.
++That still violates the workflow.
++
++## SearXNG MCP Tool Calls and Arguments
++
++You have access to two sets of tools.
++
++### SearXNG (Search Only)
++
++#### `searxng_searxng_web_search`
++
++- `query` (string): The search query. **MUST** include category bangs or language filters if applicable (see below).
++- `pageno` (number): Page number for pagination (default: 1).
++- `time_range` (string): "day", "month", or "year". **DO NOT SET THIS**. The instance silently drops it. Put recency hints in the `query` itself (e.g., `!news site:bbc.com 2026`).
++- `language` (string): e.g., "en", "fr" (default: "all").
++- `safesearch` (number): 0 (None), 1 (Moderate), 2 (Strict).
++
++#### `searxng_web_url_read`
++
++- `url` (string): Target URL to extract and convert to Markdown.
++- **DEPRECATED**: Use Puppeteer instead for all page reading to ensure reliability.
++- NEVER use this as a fallback when Puppeteer fails.
++
++### Puppeteer (Primary Web Reader)
++
++You have access to a full local Chrome browser via the following tools. **ALWAYS** use these for reading page content:
++
++- `puppeteer_navigate`: Go to a URL.
++- `puppeteer_evaluate`: Run JavaScript. Use `return document.body.innerText;` to extract the fully rendered text content of the page.
++- `puppeteer_screenshot`: Take a picture if you need to see the layout.
++- `puppeteer_click`, `puppeteer_type`, `puppeteer_hover`: Interact with elements.
++
++## SearXNG Category and Engine Bangs
++
++To get high-quality results, prepend "bangs" to your `query`.
++
++### ALL Category Bangs (Use these to restrict content types)
++
++- `!general` — Default web search.
++- `!images` — Image search.
++- `!videos` — Video search.
++- `!news` — **CRITICAL for "latest news"**. Returns actual articles instead of site homepages.
++- `!map` — Map and location data.
++- `!music` — Music and audio.
++- `!it` — IT-specific (Stack Overflow, GitHub, documentation). Use for coding tasks.
++- `!science` — Scientific papers and publications.
++- `!files` — File search.
++- `!social_media` — Social platforms.
++
++### Common Engine Bangs & Languages
++
++- **Engines:** `!wp` (Wikipedia), `!gh` (GitHub), `!so` (Stack Overflow), `!ddg` (DuckDuckGo), `!go` (Google), `!bi` (Bing), `!yt` (YouTube), `!rd` (Reddit), `!mdn` (MDN Web Docs).
++- **Language:** Prefix with a colon (e.g., `:fr !news macron`).
++
++## Recommended local models for tool/agent work
++
++The local provider (llama-swap on 127.0.0.1:11434) hosts several
++models. Their multi-step tool-use reliability on this hardware
++(Ryzen 9 6900HX + Radeon 680M iGPU, 19 GiB UMA) ranks roughly:
++
++1. `qwen3-coder:30b` (Qwen3-Coder-30B-A3B-Instruct, Q3_K_M, MoE
++   30B/3.3B active) — best local agentic coder, designed for
++   long-horizon tool use. MoE keeps inference at ~8B-class speed
++   despite the 30B total. Use this when the task involves
++   multiple tool calls, file edits, or web research.
++2. `gpt-oss:20b` (MoE 20B/3.6B active, MXFP4) — strong second
++   pick, also tuned for tool use.
++3. `qwen3:8b` — best dense model under 10B for tool use; has
++   reasoning. Use when you need lower memory pressure.
++4. `gemma3:4b`, `qwen3:4b` — fast fallbacks.
++
++Avoid for multi-step tool work: `qwen2.5:7b`, `qwen2.5-coder:7b`,
++`granite4:3b`, `deepseek-r1-tools:8b`. They were trained before
++the agentic-RL era and reliably stop after the first tool call.
++If you find yourself running on one of these and need search or
++browser use, do not half-complete the workflow. Either execute the
++REAL tool sequence correctly or immediately tell the user to switch
++to one of the recommended models above (or to the cloud
++`deepseek/deepseek-chat` default). Never print fake tool calls.
++
++## Final reminder
++
++After every `searxng_searxng_web_search`, your next action MUST be
++an ACTUAL `puppeteer_navigate` tool call. No prose, no code block,
++no fake JSON, no exceptions.
+diff --git a/users/programs/opencode.nix b/users/programs/opencode.nix
+index b8a478b..c2295fc 100644
+--- a/users/programs/opencode.nix
++++ b/users/programs/opencode.nix
+@@ -1,55 +1,32 @@
+ _:
+ let
+-  sharedMcp = import ../../modules/services/mcp-shared.nix;
++  sharedMcp = import ../../modules/services/ai/mcp.nix;
++  ai = import ../../modules/services/ai/models.nix;
+ in
+ {
+   programs.opencode = {
+     enable = true;
++
++    rules = builtins.readFile ./opencode-rules.md;
++
+     settings = {
+       "$schema" = "https://opencode.ai/config.json";
+       model = "deepseek/deepseek-chat";
+       enabled_providers = [
+         "deepseek"
+-        "ollama"
+-        "google"
++        "local"
+       ];
+       provider = {
+-        google.options.apiKey = "{file:/run/secrets/tokens/gemini}";
+         deepseek.options.apiKey = "{file:/run/secrets/tokens/deepseek}";
+-        ollama = {
+-          name = "Ollama";
++        local = {
++          name = "Local";
+           npm = "@ai-sdk/openai-compatible";
+           options.baseURL = "http://127.0.0.1:11434/v1";
+-          models = {
+-            "deepseek-r1:8b" = {
+-              _launch = true;
+-              name = "deepseek-r1:8b";
+-            };
+-            "deepseek-v3.2:cloud" = {
+-              _launch = true;
+-              name = "deepseek-v3.2:cloud";
+-              limit = {
+-                context = 163840;
+-                output = 65536;
+-              };
+-            };
+-          };
++          models = ai.local.opencodeModels;
+         };
+       };
+ 
+-      # MCP server configuration for SearXNG web search
+-      mcp = sharedMcp.searxng.opencode;
+-
+-      # Configure default agent to always use search
+-      agent = {
+-        default = {
+-          instructions = ''
+-            When working on coding tasks, always search for relevant documentation, 
+-            examples, and best practices using available web search tools.
+-            Prefer using web search tools for up-to-date information and examples.
+-          '';
+-        };
+-      };
++      mcp = sharedMcp.searxng.opencode // sharedMcp.puppeteer.opencode;
+     };
+   };
+ }

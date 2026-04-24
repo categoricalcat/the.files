@@ -99,9 +99,11 @@
 
 [pull]
 	rebase = false
+	twohead = ort
+	ff = only
 
 [merge]
-	conflictstyle = diff3
+	conflictStyle = zdiff3
 
 [diff]
 	algorithm = histogram
@@ -109,6 +111,7 @@
 
 [rerere]
 	enabled = true
+	autoUpdate = true
 
 [help]
 	autocorrect = 1
