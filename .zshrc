@@ -30,11 +30,11 @@ if [[ "$TERM" == "dumb" ]]; then
   return
 fi
 
-vecho "stowing files"
-cd ~/the.files
-stow --adopt -R -t ~ .
+# vecho "stowing files"
+# cd ~/the.files
+# stow --adopt -R -t ~ .
 
-cd - > /dev/null # return to og
+# cd - > /dev/null # return to og
 
 vecho "setting direnv"
 eval "$(direnv hook zsh)"
@@ -51,7 +51,7 @@ else
   source "$HOME/the.files/scm_breeze/install.sh"
 fi
 
-for config in ~/the.files/.config/zsh/*.zsh; do
+for config in ~/.config/zsh/*.zsh; do
     vecho "Sourcing $config"
     source "$config"
 done
