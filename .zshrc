@@ -36,11 +36,6 @@ fi
 
 # cd - > /dev/null # return to og
 
-vecho "setting direnv"
-eval "$(direnv hook zsh)"
-
-vecho "setting starship"
-eval "$(starship init zsh)"
 
 # scm_breeze setup
 if [ -s "$HOME/.scm_breeze/scm_breeze.sh" ]; then
