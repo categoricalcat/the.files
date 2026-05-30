@@ -9,14 +9,6 @@
           { lib, ... }:
           {
             home.file = {
-              ".zshrc" = {
-                source = ./.zshrc;
-                force = true;
-              };
-              ".ssh/config" = {
-                source = ./.ssh/config;
-                force = true;
-              };
               ".config/starship.toml" = {
                 source = ./.config/starship.toml;
                 force = true;
