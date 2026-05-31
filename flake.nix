@@ -20,7 +20,10 @@
               };
               ".config/zsh" = {
                 source = ./.config/zsh;
-                recursive = true;
+                force = true;
+              };
+              ".scm_breeze" = {
+                source = ./scm_breeze;
                 force = true;
               };
             };
