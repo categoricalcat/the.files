@@ -38,12 +38,9 @@ fi
 
 
 # scm_breeze setup
-if [ -s "$HOME/.scm_breeze/scm_breeze.sh" ]; then
+if [ -s "$HOME/the.files/scm_breeze/scm_breeze.sh" ]; then
   vecho "sourcing scm_breeze"
-  source "$HOME/.scm_breeze/scm_breeze.sh"
-else
-  vecho "scm_breeze not found, installing"
-  source "$HOME/the.files/scm_breeze/install.sh"
+  source "$HOME/the.files/scm_breeze/scm_breeze.sh"
 fi
 
 for config in ~/.config/zsh/*.zsh; do
