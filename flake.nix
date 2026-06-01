@@ -22,10 +22,6 @@
                 source = ./.config/zsh;
                 force = true;
               };
-              ".scm_breeze" = {
-                source = ./scm_breeze;
-                force = true;
-              };
             };
 
             home.activation.realizeSshConfig = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
